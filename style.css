@@ -1,0 +1,845 @@
+@charset "UTF-8";
+*, html {
+  box-sizing: border-box;
+  font-family: Montserrat;
+}
+
+/*
+    1. Fonts
+    2. Colors
+    ├─ Color primary
+    ├─ Color secondary
+    ├─ Purple
+    ├─ Light
+    ├─ Dark
+    └─ Gradients
+    3. Buttons
+    ├─ Default button
+    ├─ Secondary button
+    ├─ Outline button
+    ├─ Responsive design
+    ├─ Small tablet size
+    ├─ Large tablet size
+    ├─ Small laptop size
+    ├─ Normal PC size
+    └─ Large PC size
+*/
+/* -------------------------------------------------
+   # Fonts
+----------------------------------------------------*/
+/* -------------------------------------------------
+   # Colors
+----------------------------------------------------*/
+/* -------------------------------------------------
+   # Colors
+----------------------------------------------------*/
+.gp_btn {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.btn, .secondary {
+  border: 0;
+  font-family: Montserrat;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 4px;
+  padding: 13px 20px;
+  height: 42px;
+  font-size: 12px;
+  color: #ffffff;
+  background: linear-gradient(145deg, #2461ff, #735cff, #4076fe);
+  background-size: 250% 100%;
+  background-position: 0% 0;
+  transition: filter 500ms, background 500ms, border-color 500ms, color 500ms;
+}
+.btn:hover, .secondary:hover {
+  filter: drop-shadow(0 4px 16px rgba(115, 92, 255, 0.6));
+  background-position: 100% 0;
+  cursor: pointer;
+}
+.btn:active, .secondary:active {
+  box-shadow: inset 0 0 30px rgba(44, 32, 122, 0.6);
+}
+.btn.icon, .icon.secondary {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.btn.navCapacitaciones, .navCapacitaciones.secondary {
+  width: 14px;
+}
+.btn:focus-visible, .secondary:focus-visible {
+  outline: 4px solid rgba(123, 184, 255, 0.3019607843);
+  outline-offset: 3px;
+}
+
+.secondary {
+  /*
+  - background-color
+  - border-color
+  - font-color
+  - hover background color
+  - hover border-color
+  - hover font-color
+  - active background-color
+  - focus outline-color
+  */
+  background: #64FFFF;
+  color: #060D24;
+}
+.secondary:hover {
+  background: #00FDFD;
+  filter: drop-shadow(0 4px 16px rgba(0, 253, 253, 0.6));
+}
+.secondary:active {
+  box-shadow: inset 0 0 30px rgba(16, 165, 165, 0.6);
+}
+.secondary.outline {
+  background: none;
+  border: 2px solid #64FFFF;
+  color: #060D24;
+}
+.secondary.outline:hover {
+  background: #00FDFD;
+}
+
+.-line {
+  padding: 11px 20px;
+  color: #d6e0fe;
+  border: 2px solid #735CFF;
+  background: linear-gradient(145deg, rgba(36, 97, 255, 0), rgba(36, 97, 255, 0), rgba(36, 97, 255, 0), #2461ff, #735cff);
+  background-size: 250% 100%;
+  background-position: 0% 0;
+}
+.-line:hover {
+  border-color: #735CFF;
+  background: linear-gradient(145deg, #2461ff, #735cff);
+  background-position: 100% 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .btn, .secondary {
+    padding: 14px 22px;
+    height: 44px;
+    font-size: 12px;
+  }
+  .btn.-line, .-line.secondary {
+    padding: 12px 22px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .btn, .secondary {
+    padding: 15px 24px;
+    height: 46px;
+    font-size: 12px;
+  }
+  .btn.-line, .-line.secondary {
+    padding: 13px 24px;
+  }
+}
+@media only screen and (min-width: 1220px) {
+  .btn, .secondary {
+    padding: 16px 28px;
+    height: 48px;
+    font-size: 13px;
+  }
+  .btn.-line, .-line.secondary {
+    padding: 14px 28px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .btn, .secondary {
+    padding: 17px 30px;
+    height: 52px;
+    font-size: 13px;
+  }
+  .btn.-line, .-line.secondary {
+    padding: 15px 30px;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .btn, .secondary {
+    padding: 19px 32px;
+    height: 56px;
+    font-size: 14px;
+  }
+  .btn.-line, .-line.secondary {
+    padding: 17px 32px;
+  }
+}
+/*
+    1. Fonts
+    2. Colors
+    ├─ Color primary
+    ├─ Color secondary
+    ├─ Purple
+    ├─ Light
+    ├─ Dark
+    └─ Gradients
+    3. Buttons
+    ├─ Default button
+    ├─ Secondary button
+    ├─ Outline button
+    ├─ Responsive design
+    ├─ Small tablet size
+    ├─ Large tablet size
+    ├─ Small laptop size
+    ├─ Normal PC size
+    └─ Large PC size
+*/
+/* -------------------------------------------------
+   # Fonts
+----------------------------------------------------*/
+/* -------------------------------------------------
+   # Colors
+----------------------------------------------------*/
+/* -------------------------------------------------
+   # Colors
+----------------------------------------------------*/
+.gp_btn {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.btn, .secondary {
+  border: 0;
+  font-family: Montserrat;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 4px;
+  padding: 13px 20px;
+  height: 42px;
+  font-size: 12px;
+  color: #ffffff;
+  background: linear-gradient(145deg, #2461ff, #735cff, #4076fe);
+  background-size: 250% 100%;
+  background-position: 0% 0;
+  transition: filter 500ms, background 500ms, border-color 500ms, color 500ms;
+}
+.btn:hover, .secondary:hover {
+  filter: drop-shadow(0 4px 16px rgba(115, 92, 255, 0.6));
+  background-position: 100% 0;
+  cursor: pointer;
+}
+.btn:active, .secondary:active {
+  box-shadow: inset 0 0 30px rgba(44, 32, 122, 0.6);
+}
+.btn.icon, .icon.secondary {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.btn.navCapacitaciones, .navCapacitaciones.secondary {
+  width: 14px;
+}
+.btn:focus-visible, .secondary:focus-visible {
+  outline: 4px solid rgba(123, 184, 255, 0.3019607843);
+  outline-offset: 3px;
+}
+
+.secondary {
+  /*
+  - background-color
+  - border-color
+  - font-color
+  - hover background color
+  - hover border-color
+  - hover font-color
+  - active background-color
+  - focus outline-color
+  */
+  background: #64FFFF;
+  color: #060D24;
+}
+.secondary:hover {
+  background: #00FDFD;
+  filter: drop-shadow(0 4px 16px rgba(0, 253, 253, 0.6));
+}
+.secondary:active {
+  box-shadow: inset 0 0 30px rgba(16, 165, 165, 0.6);
+}
+.secondary.outline {
+  background: none;
+  border: 2px solid #64FFFF;
+  color: #060D24;
+}
+.secondary.outline:hover {
+  background: #00FDFD;
+}
+
+.-line {
+  padding: 11px 20px;
+  color: #d6e0fe;
+  border: 2px solid #735CFF;
+  background: linear-gradient(145deg, rgba(36, 97, 255, 0), rgba(36, 97, 255, 0), rgba(36, 97, 255, 0), #2461ff, #735cff);
+  background-size: 250% 100%;
+  background-position: 0% 0;
+}
+.-line:hover {
+  border-color: #735CFF;
+  background: linear-gradient(145deg, #2461ff, #735cff);
+  background-position: 100% 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .btn, .secondary {
+    padding: 14px 22px;
+    height: 44px;
+    font-size: 12px;
+  }
+  .btn.-line, .-line.secondary {
+    padding: 12px 22px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .btn, .secondary {
+    padding: 15px 24px;
+    height: 46px;
+    font-size: 12px;
+  }
+  .btn.-line, .-line.secondary {
+    padding: 13px 24px;
+  }
+}
+@media only screen and (min-width: 1220px) {
+  .btn, .secondary {
+    padding: 16px 28px;
+    height: 48px;
+    font-size: 13px;
+  }
+  .btn.-line, .-line.secondary {
+    padding: 14px 28px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .btn, .secondary {
+    padding: 17px 30px;
+    height: 52px;
+    font-size: 13px;
+  }
+  .btn.-line, .-line.secondary {
+    padding: 15px 30px;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .btn, .secondary {
+    padding: 19px 32px;
+    height: 56px;
+    font-size: 14px;
+  }
+  .btn.-line, .-line.secondary {
+    padding: 17px 32px;
+  }
+}
+.main-title {
+  max-width: 400px;
+  margin-bottom: 96px;
+}
+.main-title .title {
+  font-family: Raleway;
+  font-size: 26px;
+  background: -webkit-linear-gradient(#24AFFF, #5CFFFF);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 8px 0;
+}
+.main-title .description {
+  font-size: 14px;
+  color: white;
+  font-weight: 300;
+  margin: 4px 0;
+}
+.main-title .tema {
+  color: #3A95FF;
+  font-weight: 700;
+  font-style: italic;
+}
+.main-title .group_btn {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 6px;
+  gap: 6px;
+  margin-top: 24px;
+}
+.main-title .group_btn .btn, .main-title .group_btn .secondary {
+  width: 100%;
+  justify-content: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .main-title {
+    margin-bottom: 0;
+  }
+  .main-title .title {
+    font-size: 32px;
+    margin: 12px 0;
+  }
+  .main-title .description {
+    font-size: 16px;
+  }
+  .main-title .group_btn {
+    display: flex;
+    gap: 0;
+    grid-gap: 0;
+    margin-top: 28px;
+  }
+  .main-title .group_btn .btn, .main-title .group_btn .secondary {
+    width: auto;
+  }
+  .main-title .group_btn .btn:first-child, .main-title .group_btn .secondary:first-child {
+    margin-right: 12px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .main-title {
+    max-width: 415px;
+  }
+  .main-title .title {
+    font-size: 34px;
+    margin: 14px 0;
+  }
+  .main-title .description {
+    font-size: 17px;
+  }
+  .main-title .group_btn {
+    margin-top: 32px;
+  }
+}
+@media only screen and (min-width: 1220px) {
+  .main-title {
+    max-width: 450px;
+  }
+  .main-title .title {
+    font-size: 36px;
+    margin: 16px 0;
+  }
+  .main-title .description {
+    font-size: 18px;
+  }
+  .main-title .group_btn {
+    margin-top: 36px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .main-title {
+    max-width: 524px;
+  }
+  .main-title .title {
+    font-size: 40px;
+    margin: 18px 0;
+  }
+  .main-title .description {
+    font-size: 19px;
+  }
+  .main-title .group_btn {
+    margin-top: 40px;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .main-title {
+    max-width: 580px;
+  }
+  .main-title .title {
+    font-size: 46px;
+    margin: 20px 0;
+  }
+  .main-title .description {
+    font-size: 20px;
+  }
+  .main-title .group_btn {
+    margin-top: 48px;
+  }
+}
+/*
+    1. Fonts
+    2. Colors
+    ├─ Color primary
+    ├─ Color secondary
+    ├─ Purple
+    ├─ Light
+    ├─ Dark
+    └─ Gradients
+    3. Buttons
+    ├─ Default button
+    ├─ Secondary button
+    ├─ Outline button
+    ├─ Responsive design
+    ├─ Small tablet size
+    ├─ Large tablet size
+    ├─ Small laptop size
+    ├─ Normal PC size
+    └─ Large PC size
+*/
+/* -------------------------------------------------
+   # Fonts
+----------------------------------------------------*/
+/* -------------------------------------------------
+   # Colors
+----------------------------------------------------*/
+/* -------------------------------------------------
+   # Colors
+----------------------------------------------------*/
+.gp_btn {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.btn, .secondary {
+  border: 0;
+  font-family: Montserrat;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 4px;
+  padding: 13px 20px;
+  height: 42px;
+  font-size: 12px;
+  color: #ffffff;
+  background: linear-gradient(145deg, #2461ff, #735cff, #4076fe);
+  background-size: 250% 100%;
+  background-position: 0% 0;
+  transition: filter 500ms, background 500ms, border-color 500ms, color 500ms;
+}
+.btn:hover, .secondary:hover {
+  filter: drop-shadow(0 4px 16px rgba(115, 92, 255, 0.6));
+  background-position: 100% 0;
+  cursor: pointer;
+}
+.btn:active, .secondary:active {
+  box-shadow: inset 0 0 30px rgba(44, 32, 122, 0.6);
+}
+.btn.icon, .icon.secondary {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.btn.navCapacitaciones, .navCapacitaciones.secondary {
+  width: 14px;
+}
+.btn:focus-visible, .secondary:focus-visible {
+  outline: 4px solid rgba(123, 184, 255, 0.3019607843);
+  outline-offset: 3px;
+}
+
+.secondary {
+  /*
+  - background-color
+  - border-color
+  - font-color
+  - hover background color
+  - hover border-color
+  - hover font-color
+  - active background-color
+  - focus outline-color
+  */
+  background: #64FFFF;
+  color: #060D24;
+}
+.secondary:hover {
+  background: #00FDFD;
+  filter: drop-shadow(0 4px 16px rgba(0, 253, 253, 0.6));
+}
+.secondary:active {
+  box-shadow: inset 0 0 30px rgba(16, 165, 165, 0.6);
+}
+.secondary.outline {
+  background: none;
+  border: 2px solid #64FFFF;
+  color: #060D24;
+}
+.secondary.outline:hover {
+  background: #00FDFD;
+}
+
+.-line {
+  padding: 11px 20px;
+  color: #d6e0fe;
+  border: 2px solid #735CFF;
+  background: linear-gradient(145deg, rgba(36, 97, 255, 0), rgba(36, 97, 255, 0), rgba(36, 97, 255, 0), #2461ff, #735cff);
+  background-size: 250% 100%;
+  background-position: 0% 0;
+}
+.-line:hover {
+  border-color: #735CFF;
+  background: linear-gradient(145deg, #2461ff, #735cff);
+  background-position: 100% 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .btn, .secondary {
+    padding: 14px 22px;
+    height: 44px;
+    font-size: 12px;
+  }
+  .btn.-line, .-line.secondary {
+    padding: 12px 22px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .btn, .secondary {
+    padding: 15px 24px;
+    height: 46px;
+    font-size: 12px;
+  }
+  .btn.-line, .-line.secondary {
+    padding: 13px 24px;
+  }
+}
+@media only screen and (min-width: 1220px) {
+  .btn, .secondary {
+    padding: 16px 28px;
+    height: 48px;
+    font-size: 13px;
+  }
+  .btn.-line, .-line.secondary {
+    padding: 14px 28px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .btn, .secondary {
+    padding: 17px 30px;
+    height: 52px;
+    font-size: 13px;
+  }
+  .btn.-line, .-line.secondary {
+    padding: 15px 30px;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .btn, .secondary {
+    padding: 19px 32px;
+    height: 56px;
+    font-size: 14px;
+  }
+  .btn.-line, .-line.secondary {
+    padding: 17px 32px;
+  }
+}
+.heroSlider {
+  width: 100%;
+  height: 100vh;
+  max-height: 670px;
+  background: #060D24;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+@keyframes controllerAnimation {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+.heroSlider .controls {
+  position: absolute;
+  bottom: 0;
+  z-index: 3;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 48px;
+}
+.heroSlider .controller {
+  width: 50px;
+  padding: 8px 0;
+  border-color: transparent;
+}
+.heroSlider .controller:hover {
+  filter: drop-shadow(0 4px 16px rgba(115, 92, 255, 0.6));
+  cursor: pointer;
+}
+.heroSlider .controller:hover.controller--container {
+  background: rgba(131, 113, 247, 0.5);
+}
+.heroSlider .controller.active .controller--slider {
+  width: 0%;
+  height: 100%;
+  background: #5642d6;
+  opacity: 1;
+  animation: controllerAnimation 4s 1 ease-in-out forwards;
+}
+.heroSlider .controller--container {
+  height: 4px;
+  background: rgba(131, 113, 247, 0.3);
+}
+.heroSlider .controller--container:hover {
+  filter: drop-shadow(0 4px 16px #725cff);
+}
+.heroSlider .container {
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  padding: 0 25px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  max-width: 1440px;
+}
+@keyframes transitionAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.heroSlider .img_background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 520px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  z-index: 0;
+}
+.heroSlider .img_background .slide {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 500ms;
+}
+.heroSlider .img_background .slide.active {
+  opacity: 1;
+}
+.heroSlider .gradients {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  z-index: 1;
+}
+.heroSlider .gradients .no-gradient {
+  background: #060D24;
+}
+.heroSlider .gradients .gradient {
+  position: absolute;
+  width: 100%;
+  height: 520px;
+}
+.heroSlider .gradients .gradient.--1 {
+  background: linear-gradient(90deg, rgba(6, 13, 36, 0.5019607843) 0%, rgba(6, 13, 36, 0) 70%);
+}
+.heroSlider .gradients .gradient.--2 {
+  background: linear-gradient(0deg, #060d24 0%, rgba(6, 13, 36, 0) 70%);
+}
+.heroSlider .gradients .gradient.--3 {
+  background: linear-gradient(270deg, rgba(6, 13, 36, 0.5019607843) 0%, rgba(6, 13, 36, 0) 70%);
+}
+
+@media only screen and (min-width: 700px) {
+  .heroSlider .gradients .gradient.--1 {
+    background: linear-gradient(90deg, #060d24 10%, rgba(6, 13, 36, 0) 70%);
+  }
+  .heroSlider .gradients .gradient.--3 {
+    background: linear-gradient(270deg, #060d24 10%, rgba(6, 13, 36, 0) 70%);
+  }
+}
+@media only screen and (min-width: 768px) {
+  .heroSlider {
+    max-height: 560px;
+  }
+  .heroSlider .container {
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 40px;
+  }
+  .heroSlider .img_background {
+    height: 100%;
+    justify-content: flex-end;
+  }
+  .heroSlider .img_background .slide {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .heroSlider .gradients {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-areas: "num-1 num-2";
+  }
+  .heroSlider .gradients .no-gradient {
+    grid-area: num-1;
+  }
+  .heroSlider .gradients .gradient {
+    height: 100%;
+    grid-area: num-2;
+  }
+  .heroSlider .gradients .gradient.--3 {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .heroSlider {
+    max-height: 580px;
+  }
+  .heroSlider .container {
+    padding: 0 50px;
+  }
+  .heroSlider .gradients {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+@media only screen and (min-width: 1220px) {
+  .heroSlider {
+    max-height: 620px;
+  }
+  .heroSlider .container {
+    padding: 0 60px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .heroSlider {
+    max-height: 730px;
+  }
+  .heroSlider .container {
+    padding: 0 80px;
+  }
+  .heroSlider .controls {
+    margin-bottom: 56px;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .heroSlider {
+    max-height: 974px;
+  }
+  .heroSlider .container {
+    padding: 0 30px;
+  }
+  .heroSlider .controls {
+    margin-bottom: 64px;
+  }
+}
+body {
+  margin: 0;
+  width: 100%;
+}
+body .containerr {
+  margin: auto;
+  width: 500px;
+  height: 500px;
+  padding: 50px;
+}
+body .dark {
+  background: #060D24;
+}
+
+.content {
+  height: 500px;
+}
+
+/*# sourceMappingURL=style.css.map */

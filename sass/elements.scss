@@ -1,0 +1,285 @@
+/*
+    1. Fonts
+    2. Colors
+    ├─ Color primary
+    ├─ Color secondary
+    ├─ Purple
+    ├─ Light
+    ├─ Dark
+    └─ Gradients
+    3. Buttons
+    ├─ Default button
+    ├─ Secondary button
+    ├─ Outline button
+    ├─ Responsive design
+    ├─ Small tablet size
+    ├─ Large tablet size
+    ├─ Small laptop size
+    ├─ Normal PC size
+    └─ Large PC size
+*/
+
+
+
+
+
+/* -------------------------------------------------
+   # Fonts
+----------------------------------------------------*/
+$font-primary: Raleway;
+$font-secondary: Montserrat;
+
+
+
+
+
+
+/* -------------------------------------------------
+   # Colors
+----------------------------------------------------*/
+
+// Color primary
+$clr-primary-1: #64FFFF;
+$clr-primary-2: #00FDFD;
+$clr-primary-3: #13D8D8;
+$clr-primary: $clr-primary-2;
+
+// Color secondary
+$clr-secondary-1: #3A95FF;
+$clr-secondary-2: #1468E5;
+$clr-secondary-3: #094195;
+$clr-secondary: $clr-secondary-2;
+
+// Purple
+$clr-purple-1: #8371f7;
+$clr-purple-2: #735CFF;
+$clr-purple-3: #5642d6;
+$clr-purple: $clr-purple-2;
+
+// Color light
+$clr-light-1: #ffffff;
+$clr-light-2: #eff3ff;
+$clr-light-2: #d6e0fe;
+$clr-light: $clr-light-2;
+
+// Color dark
+$clr-dark-1: #091848;
+$clr-dark-2: #071130;
+$clr-dark-3: #060D24;
+$clr-dark: $clr-dark-2;
+
+// Gradients
+$gradient-polar: linear-gradient(145deg, #2461ff, #735cff);
+$gradient-polar__btn: linear-gradient(145deg, #2461ff, #735cff, #4076fe);
+$gradient-cold:  linear-gradient(145deg, #24AFFF, #5CFFFF);
+$gradient-transparent__btn: linear-gradient(145deg, #2461ff00, #2461ff00, #2461ff00, #2461ff, #735cff);
+
+
+
+
+
+/* -------------------------------------------------
+   # Colors
+----------------------------------------------------*/
+
+// Botones
+.gp_btn {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+// DEFAULT BUTTONS
+.btn {
+    // General
+    border: 0;
+    font-family: $font-secondary;
+    font-weight: 500;
+    //font-style: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 4px;
+
+    // Medidas
+    padding: 13px 20px;
+    height: 42px;
+    font-size: 12px;
+
+    // Colores
+    color: $clr-light-1;
+    background: $gradient-polar__btn;
+    background-size: 250% 100%;
+    background-position: 0% 0;
+
+    // Animation
+    transition: filter 500ms,
+                background 500ms,
+                border-color 500ms,
+                color 500ms;
+
+    // Estados de los botones
+    &:hover {
+        filter: drop-shadow(0 4px 16px #735cff99);
+        background-position: 100% 0;
+        cursor: pointer;
+    }
+
+    &:active {
+        box-shadow: inset 0 0 30px #2c207a99;
+    }
+
+    // Button with icon
+    &.icon {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+    }
+    &.navCapacitaciones {
+        width: 14px;
+    }
+
+    // Focus
+    &:focus-visible {
+        outline: 4px solid #7bb8ff4d;
+        outline-offset: 3px;
+    }
+
+    
+}
+
+// Botton variants
+.secondary {
+    @extend .btn;
+
+    $clr: #64FFFF;
+    $clr_hvr: #00FDFD;
+    $ft_clr: #060D24;
+    $i_shadow: inset 0 0 30px #10a5a599;
+    $d_shadow: drop-shadow(0 4px 16px #00fdfd99);
+
+    /*
+    - background-color
+    - border-color
+    - font-color
+    - hover background color
+    - hover border-color
+    - hover font-color
+    - active background-color
+    - focus outline-color
+    */
+
+    background: #64FFFF;
+    color: #060D24;
+
+    &:hover {
+        background: #00FDFD;
+        filter: $d_shadow;
+    }
+    &:active {
+        box-shadow: inset 0 0 30px #10a5a599;
+    }
+
+    &.outline {
+        background: none;
+        border: 2px solid #64FFFF;
+        color: #060D24;
+
+        &:hover {
+            background: #00FDFD;
+        }
+    }
+}
+
+// Outline buttons
+.-line {
+    padding: 11px 20px;
+
+    // Colores
+    color: $clr-light;
+    border: 2px solid $clr-purple;
+    background: $gradient-transparent__btn;
+    background-size: 250% 100%;
+    background-position: 0% 0;
+
+    // Animation
+    //transition: border-color 1000ms, color 1000ms;
+
+    &:hover{
+        // Colores
+        border-color: $clr-purple;
+        background: $gradient-polar;
+        background-position: 100% 0;
+    }
+}
+
+
+
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+////////////////// RESPONIVE DESIGN ////////////////////
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+// SMALL TABLET SIZE
+@media only screen and (min-width: 768px) {
+    .btn {
+        padding: 14px 22px;
+        height: 44px;
+        font-size: 12px;
+
+        &.-line {
+            padding: 12px 22px;
+        }
+    }
+}
+
+// LARGE TABLET SIZE
+@media only screen and (min-width: 1024px) {
+    .btn {
+        padding: 15px 24px;
+        height: 46px;
+        font-size: 12px;
+
+        &.-line {
+            padding: 13px 24px;
+        }
+    }
+}
+
+// SMALL LAPTOP SIZE
+@media only screen and (min-width: 1220px) {
+    .btn {
+        padding: 16px 28px;
+        height: 48px;
+        font-size: 13px;
+
+        &.-line {
+            padding: 14px 28px;
+        }
+    }
+}
+
+// NORMAL PC SIZE
+@media only screen and (min-width: 1440px) {
+    .btn {
+        padding: 17px 30px;
+        height: 52px;
+        font-size: 13px;
+
+        &.-line {
+            padding: 15px 30px;
+        }
+    }
+}
+
+// LARGE PC SIZE
+@media only screen and (min-width: 1920px) {
+    .btn {
+        padding: 19px 32px;
+        height: 56px;
+        font-size: 14px;
+
+        &.-line {
+            padding: 17px 32px;
+        }
+    }
+}
