@@ -80,8 +80,26 @@ function naming() {
     }
 }
 
+// Text typing
+const temas = ['Seguridad Industrial', 'Bioseguridad', 'Ciberseguridad', 'Seguridad en el hogar']
+const speed = 50;
+
+function typeWriter() {
+    let indexTemas = 0;
+    if(indexTemas < txt[0].length) {
+        document.getElementById('tema').innerHTML += txt[0].charAt(i);
+        i++;
+
+        setTimeout(typeWriter,speed);
+    }
+}
+
+//typeWriter();
+
 setTimeout(empezar(),my_timing);
 setTimeout(naming(),my_timing);
+
+
 
 /*let slideIndex = 1;
 //showSlides(slideIndex); // Se ejecuta la función :D
