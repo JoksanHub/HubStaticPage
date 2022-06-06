@@ -42,6 +42,7 @@ function empezar() {
     }
 }
 
+// Imagen
 function naming() {
     let myImagesArray = Array.prototype.slice.call(images);
     let myImagePosition = 0;
@@ -81,20 +82,68 @@ function naming() {
 }
 
 // Text typing
-const temas = ['Seguridad Industrial', 'Bioseguridad', 'Ciberseguridad', 'Seguridad en el hogar']
-const speed = 50;
-
+/*
 function typeWriter() {
-    let indexTemas = 0;
-    if(indexTemas < txt[0].length) {
-        document.getElementById('tema').innerHTML += txt[0].charAt(i);
-        i++;
+    if(temaCountCharacter < temas[temaSelected].length) {
+        document.getElementById('tema').innerHTML += temas[temaSelected].charAt(temaCountCharacter);
+        temaCountCharacter++;
 
         setTimeout(typeWriter,speed);
     }
+    else if (temaCountCharacter = temas[temaSelected].length) {
+        setTimeout(typeWriter,newTiming);
+    }
+    else {
+        temaCountCharacter = 0;
+        temaSelected++;
+        typeWriter(); 
+    }
+}
+typeWriter();
+*/
+
+
+const speed = 50;
+let temaCountCharacter = 0;
+let temaSelected = 0;
+//let newTiming = my_timing - (temas[temaSelected].length * speed);
+
+var speed2 = 100;
+var str = document.getElementById('str');
+var i = 0;
+var isRemoving = false;
+
+const messages = [
+    'Seguridad Industrial',
+    'Bioseguridad',
+    'Ciberseguridad',
+    'Seguridad en el hogar'
+];
+
+function action() {
+  if (isRemoving) {
+    if (str.innerText.length > 0) {
+      str.innerText = str.innerText.substr(0, str.innerHTML.length - 1);
+      setTimeout( action, speed2 );
+      return;
+    }
+    isRemoving = false;
+    i++;
+    if (i >= messages.length) {
+      i = 0;
+    }
+    setTimeout( action, speed );
+    return;
+  }
+  var message = messages[i];
+  str.innerText = message.substr(0, str.innerHTML.length + 1);
+  if (str.innerText.length === message.length) {
+    isRemoving = true;
+  }
+  setTimeout( action, isRemoving ? speed2 : speed );
 }
 
-//typeWriter();
+setTimeout( action, speed ) ;
 
 setTimeout(empezar(),my_timing);
 setTimeout(naming(),my_timing);
