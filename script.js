@@ -82,44 +82,49 @@ function naming() {
 }
 
 // Text typing
-/*
-function typeWriter() {
-    if(temaCountCharacter < temas[temaSelected].length) {
-        document.getElementById('tema').innerHTML += temas[temaSelected].charAt(temaCountCharacter);
-        temaCountCharacter++;
-
-        setTimeout(typeWriter,speed);
-    }
-    else if (temaCountCharacter = temas[temaSelected].length) {
-        setTimeout(typeWriter,newTiming);
-    }
-    else {
-        temaCountCharacter = 0;
-        temaSelected++;
-        typeWriter(); 
-    }
-}
-typeWriter();
-*/
-
-
 const speed = 50;
 let temaCountCharacter = 0;
 let temaSelected = 0;
-//let newTiming = my_timing - (temas[temaSelected].length * speed);
-
-var speed2 = 100;
-var str = document.getElementById('str');
-var i = 0;
-var isRemoving = false;
-
-const messages = [
+const temas = [
     'Seguridad Industrial',
     'Bioseguridad',
     'Ciberseguridad',
     'Seguridad en el hogar'
 ];
+var mi_tema = document.getElementById('tema');
 
+function typeWriter() {
+    // Si ya han pasado todos los temas, reinciarlos
+    if(temaSelected > temas.length-1) {
+        temaSelected = 0;
+        typeWriter();
+        return;
+    }
+    // Calculo de tiempo restante para pasar al siguiente slide
+    let newTiming = my_timing - (temas[temaSelected].length * speed);
+    // Ejecutar función que añade caracteres mientras haya caracteres por agregar
+    if(temaCountCharacter < temas[temaSelected].length) {
+        // Añade una letra hasta completar la palabra
+        mi_tema.innerHTML += temas[temaSelected].charAt(temaCountCharacter);
+        temaCountCharacter++;
+
+        setTimeout(typeWriter,speed);
+        return;
+    }
+    if(temaCountCharacter == temas[temaSelected].length) {
+        function my_funcion() {
+            temaCountCharacter = 0;
+            temaSelected++;
+            setTimeout(typeWriter,speed);
+            mi_tema.innerHTML = '';
+            return;
+        }
+        setTimeout(my_funcion,newTiming);
+    }
+}
+typeWriter();
+
+/*
 function action() {
   if (isRemoving) {
     if (str.innerText.length > 0) {
@@ -143,7 +148,7 @@ function action() {
   setTimeout( action, isRemoving ? speed2 : speed );
 }
 
-setTimeout( action, speed ) ;
+setTimeout( action, speed );*/
 
 setTimeout(empezar(),my_timing);
 setTimeout(naming(),my_timing);
