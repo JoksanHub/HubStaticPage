@@ -82,7 +82,7 @@ function naming() {
 }
 
 // Text typing
-const speed = 50;
+const speed = 80;
 let temaCountCharacter = 0;
 let temaSelected = 0;
 const temas = [
