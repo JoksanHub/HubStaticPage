@@ -1,22 +1,18 @@
 /*
     1. Fonts
     2. Colors
-    ├─ Color primary
-    ├─ Color secondary
+    ├─ Primary
+    ├─ Secondary
     ├─ Purple
     ├─ Light
     ├─ Dark
     └─ Gradients
     3. Buttons
-    ├─ Default button
-    ├─ Secondary button
-    ├─ Outline button
-    ├─ Responsive design
-    ├─ Small tablet size
-    ├─ Large tablet size
-    ├─ Small laptop size
-    ├─ Normal PC size
-    └─ Large PC size
+    ├─ Default
+    ├─ Outline
+    ├─ Color
+    ├─ Size
+    └─ Responsive
 */
 
 
@@ -79,15 +75,8 @@ $gradient-transparent__btn: linear-gradient(145deg, #2461ff00, #2461ff00, #2461f
 
 
 /* -------------------------------------------------
-   # Colors
+   # Botones
 ----------------------------------------------------*/
-
-// Botones
-.gp_btn {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
-}
 
 // DEFAULT BUTTONS
 .btn {
@@ -95,15 +84,20 @@ $gradient-transparent__btn: linear-gradient(145deg, #2461ff00, #2461ff00, #2461f
     border: 0;
     font-family: $font-secondary;
     font-weight: 500;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+
     //font-style: none;
     text-decoration: none;
     text-transform: uppercase;
     border-radius: 4px;
 
     // Medidas
-    padding: 13px 20px;
-    height: 42px;
-    font-size: 12px;
+    height: 38px;
+    padding: 11px 14px;
+    font-size: 10px;
 
     // Colores
     color: $clr-light-1;
@@ -123,70 +117,12 @@ $gradient-transparent__btn: linear-gradient(145deg, #2461ff00, #2461ff00, #2461f
         background-position: 100% 0;
         cursor: pointer;
     }
-
     &:active {
         box-shadow: inset 0 0 30px #2c207a99;
     }
-
-    // Button with icon
-    &.icon {
-        display: flex;
-        gap: 5px;
-        align-items: center;
-    }
-    &.navCapacitaciones {
-        width: 14px;
-    }
-
-    // Focus
     &:focus-visible {
         outline: 4px solid #7bb8ff4d;
         outline-offset: 3px;
-    }
-
-    
-}
-
-// Botton variants
-.secondary {
-    @extend .btn;
-
-    $clr: #64FFFF;
-    $clr_hvr: #00FDFD;
-    $ft_clr: #060D24;
-    $i_shadow: inset 0 0 30px #10a5a599;
-    $d_shadow: drop-shadow(0 4px 16px #00fdfd99);
-
-    /*
-    - background-color
-    - border-color
-    - font-color
-    - hover background color
-    - hover border-color
-    - hover font-color
-    - active background-color
-    - focus outline-color
-    */
-
-    background: #64FFFF;
-    color: #060D24;
-
-    &:hover {
-        background: #00FDFD;
-        filter: $d_shadow;
-    }
-    &:active {
-        box-shadow: inset 0 0 30px #10a5a599;
-    }
-
-    &.outline {
-        background: none;
-        border: 2px solid #64FFFF;
-        color: #060D24;
-
-        &:hover {
-            background: #00FDFD;
-        }
     }
 }
 
@@ -211,19 +147,117 @@ $gradient-transparent__btn: linear-gradient(145deg, #2461ff00, #2461ff00, #2461f
         background-position: 100% 0;
     }
 }
+// Botones de diferentes colores
+.btn-cold {
+    // Cold color
+    @extend .btn;
 
+    $color_pri: $clr-primary-1;       // Color solido
+    $color_pri_hover: $clr-primary-2; // Color solido hover
+    $color_oscuro: $clr-dark-3;       // Color oscuro
+    $color_claro: white;            // Color claro
+    $i_shadow: inset 0 0 30px #10a5a599;
+    $d_shadow: drop-shadow(0 4px 16px #00fdfd99);
 
+    background: $color_pri;
+    color:      $color_oscuro;
 
-////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////
-////////////////// RESPONIVE DESIGN ////////////////////
-////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////
+    &:hover {
+        background: $color_pri_hover;
+        filter:     $d_shadow;
+    }
+    &:active {
+        box-shadow: $i_shadow;
+    }
+
+    &.-line {
+        background: none;
+        border: 2px solid $color_pri;
+        color: $color_claro;
+
+        &:hover {
+            background: $color_pri_hover;
+            color: $color_oscuro;
+        }
+    }
+}
+.btn-blue {
+    // Blue color
+    @extend .btn;
+
+    $color_pri: $clr-secondary-1;       // Color solido
+    $color_pri_hover: $clr-secondary-2; // Color solido hover
+    $color_oscuro: $clr-dark-3;       // Color oscuro
+    $color_claro: white;            // Color claro
+    $i_shadow: inset 0 0 30px #1468E599;
+    $d_shadow: drop-shadow(0 4px 16px #1468E599);
+
+    background: $color_pri;
+    color:      $color_oscuro;
+
+    &:hover {
+        background: $color_pri_hover;
+        filter:     $d_shadow;
+    }
+    &:active {
+        box-shadow: $i_shadow;
+    }
+
+    &.-line {
+        background: none;
+        border: 2px solid $color_pri;
+        color: $color_claro;
+
+        &:hover {
+            background: $color_pri;
+            color: $color_oscuro;
+        }
+    }
+}
+
+// Tamaños en botones
+.btn.sm {
+    height: 30px;
+    padding: 9px 12px;
+    font-size: 9px;
+
+    &.-line {
+        padding: 7px 12px;
+    }
+}
+.btn.lg {
+    height: 42px;
+    padding: 13px 20px;
+    font-size: 11px;
+
+    &.-line {
+        padding: 11px 20px;
+    }
+}
+
 // SMALL TABLET SIZE
 @media only screen and (min-width: 768px) {
     .btn {
-        padding: 14px 22px;
+        height: 40px;
+        padding: 12px 16px;
+        font-size: 11px;
+
+        &.-line {
+            padding: 10px 16px;
+        }
+    }
+    .btn.sm {
+        height: 32px;
+        padding: 10px 14px;
+        font-size: 9px;
+
+        &.-line {
+            padding: 8px 14px;
+        }
+    }
+    .btn.lg {
         height: 44px;
+        padding: 14px 22px;
         font-size: 12px;
 
         &.-line {
@@ -235,8 +269,26 @@ $gradient-transparent__btn: linear-gradient(145deg, #2461ff00, #2461ff00, #2461f
 // LARGE TABLET SIZE
 @media only screen and (min-width: 1024px) {
     .btn {
-        padding: 15px 24px;
+        height: 42px;
+        padding: 13px 18px;
+        font-size: 12px;
+
+        &.-line {
+            padding: 11px 18px;
+        }
+    }
+    .btn.sm {
+        height: 34px;
+        padding: 10px 16px;
+        font-size: 11px;
+
+        &.-line {
+            padding: 8px 16px;
+        }
+    }
+    .btn.lg {
         height: 46px;
+        padding: 15px 24px;
         font-size: 12px;
 
         &.-line {
@@ -248,8 +300,26 @@ $gradient-transparent__btn: linear-gradient(145deg, #2461ff00, #2461ff00, #2461f
 // SMALL LAPTOP SIZE
 @media only screen and (min-width: 1220px) {
     .btn {
-        padding: 16px 28px;
+        height: 44px;
+        padding: 14px 20px;
+        font-size: 12px;
+
+        &.-line {
+            padding: 12px 20px;
+        }
+    }
+    .btn.sm {
+        height: 36px;
+        padding: 10px 20px;
+        font-size: 11px;
+
+        &.-line {
+            padding: 8px 20px;
+        }
+    }
+    .btn.lg {
         height: 48px;
+        padding: 16px 28px;
         font-size: 13px;
 
         &.-line {
@@ -261,8 +331,26 @@ $gradient-transparent__btn: linear-gradient(145deg, #2461ff00, #2461ff00, #2461f
 // NORMAL PC SIZE
 @media only screen and (min-width: 1440px) {
     .btn {
-        padding: 17px 30px;
+        height: 46px;
+        padding: 15px 22px;
+        font-size: 13px;
+
+        &.-line {
+            padding: 13px 22px;
+        }
+    }
+    .btn.sm {
+        height: 38px;
+        padding: 10px 24px;
+        font-size: 12px;
+
+        &.-line {
+            padding: 8px 24px;
+        }
+    }
+    .btn.lg {
         height: 52px;
+        padding: 17px 30px;
         font-size: 13px;
 
         &.-line {
@@ -274,8 +362,26 @@ $gradient-transparent__btn: linear-gradient(145deg, #2461ff00, #2461ff00, #2461f
 // LARGE PC SIZE
 @media only screen and (min-width: 1920px) {
     .btn {
-        padding: 19px 32px;
+        height: 48px;
+        padding: 16px 24px;
+        font-size: 13px;
+
+        &.-line {
+            padding: 14px 24px;
+        }
+    }
+    .btn.sm {
+        height: 40px;
+        padding: 10px 28px;
+        font-size: 12px;
+
+        &.-line {
+            padding: 8px 28px;
+        }
+    }
+    .btn.lg {
         height: 56px;
+        padding: 19px 32px;
         font-size: 14px;
 
         &.-line {

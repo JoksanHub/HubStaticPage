@@ -1,6 +1,6 @@
 *, html {
     box-sizing: border-box;
-    font-family: Montserrat;
+    font-family: 'Montserrat', sans-serif;
 }
 
 @import 'elements.scss',
@@ -10,16 +10,6 @@
 body {
     margin: 0;
     width: 100%;
-
-    .containerr {
-        margin: auto;
-        width: 500px;
-        height: 500px;
-        padding: 50px;
-    }
-    .dark {
-        background: $clr-dark-3;
-    }
 }
 
 .content {

@@ -1,11 +1,11 @@
 // Controlador
 let control = document.getElementsByClassName("controller");
 let images = document.getElementsByClassName("slide");
-let my_timing = 4000;
+let myTiming = 4000;
 let myCounting = 0;
 
 // Controles automáticos
-function empezar() {
+function controles() {
     // Si todos los controladores tienen la clase active, borrar la clase active
     if (control[control.length-1].classList.contains('active')) {
         // Resetea las clases 'active' en controladores
@@ -18,32 +18,32 @@ function empezar() {
         // Resetear la cuenta de las imágenes
         myCounting = 0;
         // Reiniciar slider
-        empezar();
+        controles();
     }
     else {
-        function addImages(conteo) {
+        function nuevoControl(conteo) {
             // Agrega uno más al conteo
             for (let i = conteo; i < control.length; i++) {
                 if (control[i].classList.contains('active')) { myCounting++; }
                 else { break; }
             }
             control[myCounting].classList.add('active');
-            setTimeout(empezar, my_timing);
+            setTimeout(controles, myTiming);
         }
         // Si no tiene ninguna clase agregada, reiniciar cuenta
         if (control[0].classList.contains('active')) {
-            setTimeout(addImages(myCounting), my_timing);
+            setTimeout(nuevoControl(myCounting), myTiming);
             myCounting = 0; // Reestablecer cuenta a cero
         }
         // Ejecutar código casi inmediato
         else {
-            setTimeout(addImages,5);
+            setTimeout(nuevoControl,5);
         }
     }
 }
 
 // Imagen
-function naming() {
+function heroImagenes() {
     let myImagesArray = Array.prototype.slice.call(images);
     let myImagePosition = 0;
     // Ejecutar función
@@ -57,7 +57,7 @@ function naming() {
                 break;
             }
         }
-        setTimeout(agregarClases, my_timing);
+        setTimeout(agregarClases, myTiming);
 
         function agregarClases() {
             if(images[myImagePosition] == images.length) {
@@ -82,7 +82,7 @@ function naming() {
 }
 
 // Text typing
-const speed = 80;
+const speed = 50;
 let temaCountCharacter = 0;
 let temaSelected = 0;
 const temas = [
@@ -94,14 +94,14 @@ const temas = [
 var mi_tema = document.getElementById('tema');
 
 function typeWriter() {
-    // Si ya han pasado todos los temas, reinciarlos
+    // Si ya han pasado todos los temas, reiniciarlos
     if(temaSelected > temas.length-1) {
         temaSelected = 0;
         typeWriter();
         return;
     }
-    // Calculo de tiempo restante para pasar al siguiente slide
-    let newTiming = my_timing - (temas[temaSelected].length * speed);
+    // Cálculo de tiempo restante para pasar al siguiente slide
+    let newTiming = myTiming - (temas[temaSelected].length * speed);
     // Ejecutar función que añade caracteres mientras haya caracteres por agregar
     if(temaCountCharacter < temas[temaSelected].length) {
         // Añade una letra hasta completar la palabra
@@ -122,36 +122,10 @@ function typeWriter() {
         setTimeout(my_funcion,newTiming);
     }
 }
+
 typeWriter();
-
-/*
-function action() {
-  if (isRemoving) {
-    if (str.innerText.length > 0) {
-      str.innerText = str.innerText.substr(0, str.innerHTML.length - 1);
-      setTimeout( action, speed2 );
-      return;
-    }
-    isRemoving = false;
-    i++;
-    if (i >= messages.length) {
-      i = 0;
-    }
-    setTimeout( action, speed );
-    return;
-  }
-  var message = messages[i];
-  str.innerText = message.substr(0, str.innerHTML.length + 1);
-  if (str.innerText.length === message.length) {
-    isRemoving = true;
-  }
-  setTimeout( action, isRemoving ? speed2 : speed );
-}
-
-setTimeout( action, speed );*/
-
-setTimeout(empezar(),my_timing);
-setTimeout(naming(),my_timing);
+setTimeout(controles(),myTiming);
+setTimeout(heroImagenes(),myTiming);
 
 
 
