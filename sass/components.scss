@@ -1,5 +1,24 @@
 @import 'elements.scss';
+/*
+    1. Title Primary
+    2. Title Secondary
+    ├─ Primary
+    ├─ Secondary
+    ├─ Purple
+    ├─ Light
+    ├─ Dark
+    └─ Gradients
+    3. Buttons
+    ├─ Default
+    ├─ Outline
+    ├─ Color
+    ├─ Size
+    └─ Responsive
+*/
 
+/* -------------------------------------------------
+   # Title Primary
+----------------------------------------------------*/
 .main-title {
     max-width: 400px;
     margin-bottom: 96px;
@@ -129,6 +148,167 @@
         }
         .group_btn {
             margin-top: 48px;
+        }
+    }
+}
+
+
+
+
+
+/* -------------------------------------------------
+   # Title Secondary
+----------------------------------------------------*/
+.title-secondary {
+    max-width: 360px;
+    margin-bottom: 20px;
+
+    // DESCRIPTOR
+    .descriptor {
+        // Font
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        margin: 0 0 4px 0;
+        color: #1B1740;
+    }
+    // TITLE
+    .title {
+        // Font
+        font-size: 22px;
+        background: linear-gradient(145deg,#2461FF,#735CFF);
+        background-clip: text;
+        background: -webkit-linear-gradient(145deg,#2461FF,#735CFF);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        // Sizes
+        margin: 0 0 8px 0;
+    }
+    // DESCRIPTION
+    .description {
+        font-size: 14px;
+        color: #585C87;
+
+        // Sizes
+        margin: 0;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .title-secondary {
+        max-width: 360px;
+        margin-bottom: 20px;
+
+        .descriptor { font-size: 11px; }
+        .title { font-size: 24px; }
+        .description { font-size: 15px; }
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .title-secondary {
+        max-width: 360px;
+        margin-bottom: 28px;
+
+        .title { font-size: 28px; }
+        .description { font-size: 16px; }
+    }
+}
+
+@media only screen and (min-width: 1220px) {
+    .title-secondary {
+        max-width: 420px;
+        margin-bottom: 34px;
+
+        .descriptor { font-size: 12px; }
+        .title { font-size: 32px; }
+        .description { font-size: 17px; }
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .title-secondary {
+        max-width: 460px;
+        margin-bottom: 42px;
+
+        .descriptor { font-size: 13px; }
+        .title { font-size: 36px; }
+        .description { font-size: 18px; }
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .title-secondary {
+        max-width: 500px;
+        margin-bottom: 50px;
+
+        .descriptor { font-size: 14px; }
+        .title { font-size: 40px; }
+        .description { font-size: 20px; }
+    }
+}
+
+/* -------------------------------------------------
+   # Benefits - Card
+----------------------------------------------------*/
+#beneficios {
+    .card {
+        padding: 16px 20px 16px 16px;
+        display: flex;
+        background: white;
+        width: 100%;
+        max-width: 380px;
+        border-radius: 4px;
+        gap: 6px;
+        filter: drop-shadow(0 3px 8px rgba(24, 144, 255, 10%));
+
+        img {
+            width: 60px;
+        }
+        .content {
+            display: flex;
+            align-items: self-start;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .title {
+            font-size: 16px;
+            color: #1B1740;
+            margin: 0 0 2px 0;
+        }
+        .description {
+            font-size: 12px;
+            color: #8285A4;
+            margin: 0;
+        }
+    }
+}
+@media only screen and (min-width: 768px) {
+    #beneficios {
+        .card {
+            max-width: none;
+        }
+    }
+}
+@media only screen and (min-width: 1024px) {
+    #beneficios {
+        .card {
+            padding: 18px;
+
+            .title { font-size: 17px; }
+            .description { font-size: 13px; }
+        }
+    }
+}
+@media only screen and (min-width: 1440px) {
+    #beneficios {
+        .card {
+            padding: 20px;
+            
+            .title { font-size: 18px; }
+            .description { font-size: 14px; }
         }
     }
 }

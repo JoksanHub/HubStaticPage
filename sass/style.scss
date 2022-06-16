@@ -1,6 +1,7 @@
 *, html {
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
+    text-rendering: optimizeLegibility;
 }
 
 @import 'elements.scss',
@@ -10,8 +11,4 @@
 body {
     margin: 0;
     width: 100%;
-}
-
-.content {
-    height: 500px;
 }

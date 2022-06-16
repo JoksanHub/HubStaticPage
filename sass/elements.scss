@@ -13,6 +13,7 @@
     ├─ Color
     ├─ Size
     └─ Responsive
+    4. Containers
 */
 
 
@@ -387,5 +388,41 @@ $gradient-transparent__btn: linear-gradient(145deg, #2461ff00, #2461ff00, #2461f
         &.-line {
             padding: 17px 32px;
         }
+    }
+}
+
+
+
+
+
+/* -------------------------------------------------
+   # Containers
+----------------------------------------------------*/
+.container {
+    padding-right: 25px;
+    padding-left: 25px;
+}
+@media only screen and (min-width: 768px) {
+    .container {
+        padding-right: 40px;
+        padding-left:  40px;
+    }
+}
+@media only screen and (min-width: 1024px) {
+    .container {
+        padding-right: 50px;
+        padding-left:  50px;
+    }
+}
+@media only screen and (min-width: 1220px) {
+    .container {
+        padding-right: 60px;
+        padding-left:  60px;
+    }
+}
+@media only screen and (min-width: 1440px) {
+    .container {
+        padding-right: 80px;
+        padding-left:  80px;
     }
 }
