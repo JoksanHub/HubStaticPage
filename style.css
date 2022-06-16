@@ -784,9 +784,16 @@
   margin: 0;
 }
 
+@media only screen and (min-width: 410px) {
+  .title-secondary .descriptor,
+.title-secondary .title,
+.title-secondary .description {
+    text-align: center;
+  }
+}
 @media only screen and (min-width: 768px) {
   .title-secondary {
-    max-width: 360px;
+    max-width: 380px;
     margin-bottom: 20px;
   }
   .title-secondary .descriptor {
@@ -801,7 +808,7 @@
 }
 @media only screen and (min-width: 1024px) {
   .title-secondary {
-    max-width: 360px;
+    max-width: 420px;
     margin-bottom: 28px;
   }
   .title-secondary .title {
@@ -813,7 +820,7 @@
 }
 @media only screen and (min-width: 1220px) {
   .title-secondary {
-    max-width: 420px;
+    max-width: 450px;
     margin-bottom: 34px;
   }
   .title-secondary .descriptor {
@@ -828,7 +835,7 @@
 }
 @media only screen and (min-width: 1440px) {
   .title-secondary {
-    max-width: 460px;
+    max-width: 475px;
     margin-bottom: 42px;
   }
   .title-secondary .descriptor {

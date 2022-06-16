@@ -195,10 +195,18 @@
         margin: 0;
     }
 }
-
+@media only screen and (min-width: 410px) {
+    .title-secondary {
+        .descriptor,
+        .title,
+        .description {
+            text-align: center;
+        }
+    }
+}
 @media only screen and (min-width: 768px) {
     .title-secondary {
-        max-width: 360px;
+        max-width: 380px;
         margin-bottom: 20px;
 
         .descriptor { font-size: 11px; }
@@ -209,7 +217,7 @@
 
 @media only screen and (min-width: 1024px) {
     .title-secondary {
-        max-width: 360px;
+        max-width: 420px;
         margin-bottom: 28px;
 
         .title { font-size: 28px; }
@@ -219,7 +227,7 @@
 
 @media only screen and (min-width: 1220px) {
     .title-secondary {
-        max-width: 420px;
+        max-width: 450px;
         margin-bottom: 34px;
 
         .descriptor { font-size: 12px; }
@@ -230,7 +238,7 @@
 
 @media only screen and (min-width: 1440px) {
     .title-secondary {
-        max-width: 460px;
+        max-width: 475px;
         margin-bottom: 42px;
 
         .descriptor { font-size: 13px; }
