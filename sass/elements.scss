@@ -71,7 +71,10 @@ $gradient-polar__btn: linear-gradient(145deg, #2461ff, #735cff, #4076fe);
 $gradient-cold:  linear-gradient(145deg, #24AFFF, #5CFFFF);
 $gradient-transparent__btn: linear-gradient(145deg, #2461ff00, #2461ff00, #2461ff00, #2461ff, #735cff);
 
-
+::selection {
+    color: #4536a1;
+    background: rgba(131, 113, 247,0.2);
+}
 
 
 
