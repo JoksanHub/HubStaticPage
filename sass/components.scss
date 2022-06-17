@@ -195,8 +195,10 @@
         margin: 0;
     }
 }
+
 @media only screen and (min-width: 410px) {
-    .title-secondary {
+    // Clase específica para centrar el texto
+    .title-secondary.centered {
         .descriptor,
         .title,
         .description {
@@ -249,7 +251,7 @@
 
 @media only screen and (min-width: 1920px) {
     .title-secondary {
-        max-width: 500px;
+        max-width: 590px;
         margin-bottom: 50px;
 
         .descriptor { font-size: 14px; }
@@ -318,5 +320,77 @@
             .title { font-size: 18px; }
             .description { font-size: 14px; }
         }
+    }
+}
+
+/* -------------------------------------------------
+   # Miembros Hub - Card
+----------------------------------------------------*/
+#miembro-hub {
+    .card-slider {
+        $card-size: 225px;
+
+        .card {
+            width: 310px;
+            padding: 25px 20px 20px;
+            background: white;
+            border-radius: 6px;
+            display: grid;
+            grid-template-columns: auto;
+            grid-template-rows: auto auto auto;
+            height: $card-size;
+            position: relative;
+        }
+
+        .card .title {
+            font-size: 16px;
+            color: #3B3F64;
+            margin: 0 0 2px 0;
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }
+        .card .description {
+            font-size: 12px;
+            color: #737799;
+            margin: 0;
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }
+        .card .descriptor {
+            font-size: 12px;
+            color: #2B1178;
+            grid-column: 1/2;
+            grid-row: 3/4;
+        }
+        .card .image     {
+            width: 240px;
+            position: absolute;
+            bottom: $card-size;
+        }
+        // Card active
+        .card.active {
+            background: $gradient-polar;
+
+            .title       { color: white;}
+            .description { color: #B4C9FF;}
+        }
+    }
+}
+@media only screen and (min-width: 768px) {
+}
+@media only screen and (min-width: 1024px) {
+    #miembro-hub {
+        .card-slider {
+            .card .title       { font-size: 17px; margin: 0 0 4px 0; }
+            .card .description,
+            .card .descriptor  { font-size: 13px; }
+        }
+    }
+}
+@media only screen and (min-width: 1440px) {
+    #miembro-hub {
+        .card .title       { font-size: 18px; }
+        .card .description,
+        .card .descriptor  { font-size: 14px; }
     }
 }

@@ -231,9 +231,11 @@
 
 
 /* -------------------------------------------------
-   # Benefits
+   # Beneficios - Sección
 ----------------------------------------------------*/
 #beneficios {
+    display: flex;
+    justify-content: center;
     padding: 60px 0 40px 0;
     background: #F6F9FF;
 
@@ -319,4 +321,51 @@
             max-width: 1440px;
         }
     }
+}
+
+
+
+
+
+
+/* -------------------------------------------------
+   # Miembro Hub - Sección
+----------------------------------------------------*/
+#miembro-hub {
+    padding: 60px 0 40px 0;
+    display: flex;
+    justify-content: center;
+    background: #F6F9FF;
+
+    .container {
+        margin-right: 0;
+        width: 100%;
+    }
+    .card-slider {
+        gap: 12px;
+        display: grid;
+        grid-template-columns:
+            auto auto auto auto;
+        width: calc(100vw - 25px);
+        padding-top: 320px;
+        position: absolute;
+        overflow: hidden;
+        background-color: #F6F9FF;
+    }
+}
+// Pantallas de 768px en adelante
+@media only screen and (min-width: 768px) {
+    #miembro-hub { padding: 80px 0 60px 0; }
+}
+// Pantallas de 768px en adelante
+@media only screen and (min-width: 768px) {
+    #miembro-hub { padding: 100px 0 80px 0; }
+}
+// Pantallas de 1220px en adelante
+@media only screen and (min-width: 1220px) {
+    #miembro-hub { padding: 120px 0 80px 0; }
+}
+// Pantallas de 144px en adelante
+@media only screen and (min-width: 1440px) {
+    #miembro-hub { padding: 160px 0 100px 0; }
 }
