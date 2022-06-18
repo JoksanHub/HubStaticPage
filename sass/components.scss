@@ -363,10 +363,10 @@
             grid-column: 1/2;
             grid-row: 3/4;
         }
-        .card .image-avatar     {
+        .card .image-avatar {
             width: 240px;
             position: absolute;
-            bottom: 210px;
+            top: -320px;
             left: 35px;
         }
         // Card active
@@ -386,7 +386,7 @@
         }
         .card-slider .card .image-avatar {
             width: 260px;
-            bottom: -20px;
+            top: -162px;
             right: 0;
             grid-column: 2/3;
             grid-row: 1/4;

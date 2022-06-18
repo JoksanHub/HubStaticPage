@@ -974,7 +974,7 @@
 #miembro-hub .card-slider .card .image-avatar {
   width: 240px;
   position: absolute;
-  bottom: 210px;
+  top: -320px;
   left: 35px;
 }
 #miembro-hub .card-slider .card.active {
