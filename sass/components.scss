@@ -160,7 +160,7 @@
    # Title Secondary
 ----------------------------------------------------*/
 .title-secondary {
-    max-width: 360px;
+    max-width: 340px;
     margin-bottom: 20px;
 
     // DESCRIPTOR
@@ -195,10 +195,13 @@
         margin: 0;
     }
 }
+.title-secondary.-lg {
+    max-width: 360px;
+}
 
 @media only screen and (min-width: 410px) {
     // Clase específica para centrar el texto
-    .title-secondary.centered {
+    .title-secondary.-cen {
         .descriptor,
         .title,
         .description {
@@ -208,55 +211,70 @@
 }
 @media only screen and (min-width: 768px) {
     .title-secondary {
-        max-width: 380px;
+        max-width: 360px;
         margin-bottom: 20px;
 
         .descriptor { font-size: 11px; }
         .title { font-size: 24px; }
         .description { font-size: 15px; }
     }
+    .title-secondary.-lg {
+        max-width: 380px;
+    }
 }
 
 @media only screen and (min-width: 1024px) {
     .title-secondary {
-        max-width: 420px;
+        max-width: 400px;
         margin-bottom: 28px;
 
         .title { font-size: 28px; }
         .description { font-size: 16px; }
     }
+    .title-secondary.-lg {
+        max-width: 420px;
+    }
 }
 
 @media only screen and (min-width: 1220px) {
     .title-secondary {
-        max-width: 450px;
+        max-width: 430px;
         margin-bottom: 34px;
 
         .descriptor { font-size: 12px; }
         .title { font-size: 32px; }
         .description { font-size: 17px; }
     }
+    .title-secondary.-lg {
+        max-width: 450px;
+    }
 }
 
 @media only screen and (min-width: 1440px) {
     .title-secondary {
-        max-width: 475px;
+        max-width: 455px;
         margin-bottom: 42px;
 
         .descriptor { font-size: 13px; }
         .title { font-size: 36px; }
         .description { font-size: 18px; }
     }
+    .title-secondary.-lg {
+        max-width: 475px;
+    }
 }
 
 @media only screen and (min-width: 1920px) {
     .title-secondary {
-        max-width: 590px;
+        max-width: 520px;
         margin-bottom: 50px;
 
         .descriptor { font-size: 14px; }
         .title { font-size: 40px; }
         .description { font-size: 20px; }
+    }
+    .title-secondary.-lg {
+        max-width: 590px;
     }
 }
 
@@ -307,6 +325,7 @@
         .card {
             padding: 18px;
 
+            // Content
             .title { font-size: 17px; }
             .description { font-size: 13px; }
         }
@@ -327,9 +346,8 @@
    # Miembros Hub - Card
 ----------------------------------------------------*/
 #miembro-hub {
-    .card-slider {
-
-        .card {
+    // The Card
+    .card-slider .card {
             width: 310px;
             padding: 25px 20px 20px;
             background: white;
@@ -338,61 +356,68 @@
             grid-template-columns: auto;
             grid-template-rows: repeat(3, auto);
             position: relative;
-        }
-
-        .card .title,
-        .card .description,
-        .card .descriptor { margin: 0; }
-        .card .title {
+            filter: drop-shadow(0 3px 8px rgba(24, 144, 255, 10%));
+    }
+    // The Content
+    .card .title,
+    .card .description,
+    .card .descriptor { margin: 0; }
+    .card {
+        .title {
             font-size: 16px;
             color: #3B3F64;
             margin-bottom: 4px;
             grid-column: 1/2;
             grid-row: 1/2;
         }
-        .card .description {
+        .description {
             font-size: 12px;
             color: #737799;
             margin-bottom: 12px;
             grid-column: 1/2;
             grid-row: 2/3;
         }
-        .card .descriptor {
+        .descriptor {
             font-size: 12px;
             color: #2B1178;
             grid-column: 1/2;
             grid-row: 3/4;
         }
-        .card .image-avatar {
+        .image-avatar {
             width: 240px;
             position: absolute;
             top: -320px;
             left: 35px;
         }
-        // Card active
-        .card.active {
-            background: $gradient-polar;
+    }
+    // Card active
+    .card.active {
+        background: $gradient-polar;
 
-            .title       { color: white;}
-            .description { color: #B4C9FF;}
-        }
+        .title       { color: white;   }
+        .description { color: #B4C9FF; }
     }
 }
+// Screen size 768px
 @media only screen and (min-width: 768px) {
     #miembro-hub {
         .card-slider .card {
             width: 580px;
             grid-template-columns: 270px 260px;
         }
-        .card-slider .card .image-avatar {
-            width: 260px;
-            top: -162px;
-            right: 0;
-            grid-column: 2/3;
-            grid-row: 1/4;
+        .card {
+            .title { font-size: 18px; }
+            .image-avatar {
+                width: 260px;
+                top: -160px;
+                right: 0;
+                grid-column: 2/3;
+                grid-row: 1/4;
+            }
         }
     }
 }
+// Screen size 1024px
 @media only screen and (min-width: 1024px) {
     #miembro-hub {
         .card-slider .card {
@@ -401,31 +426,78 @@
             width: 624px;
             height: 230px;
         }
-        .card-slider .card .image-avatar { width: 280px; bottom: -25px; left: 10px;}
-        .card-slider {
-            .card .title       { font-size: 17px; margin: 0 0 4px 0; }
-            .card .description,
-            .card .descriptor  { font-size: 13px; }
+        // Content
+        .card {
+            .title { font-size: 20px; }
+            .description,
+            .descriptor  { font-size: 13px; }
+            .image-avatar {
+                width: 280px;
+                top: -168px;
+                left: 10px;
+            }
         }
     }
 }
-@media only screen and (min-width: 1440px) {
+// Screen size 1220px
+@media only screen and (min-width: 1220px) {
     #miembro-hub {
-        .card-slider .card { 
-            grid-template-rows: 26px 120px 30px;
-            grid-template-columns: 300px 300px;
+        .card-slider .card {
+            grid-template-columns: 360px 340px;
             padding: 30px;
-            width: 700px;
+            width: 704px;
             height: 230px;
-
-            .image-avatar {width: 290px;}
+        }
+        .card {
+            // Content
+            .title { font-size: 22px; }
+            .description,
+            .descriptor  { font-size: 14px; }
+            .image-avatar {
+                top: -213px;
+                width: 310px;
+                left: 5px;
+            }
         }
     }
 }
+// Screen size 1440px
 @media only screen and (min-width: 1440px) {
     #miembro-hub {
-        .card .title       { font-size: 18px; }
-        .card .description,
-        .card .descriptor  { font-size: 14px; }
+        .card-slider .card {
+            grid-template-columns: 385px 340px;
+            width: 780px;
+        }
+        .card {
+            // Content
+            .title { font-size: 24px; }
+            .description,
+            .descriptor  { font-size: 14px; }
+            .image-avatar {
+                top: -240px;
+                width: 330px;
+                left: 20px;
+            }
+        }
+    }
+}
+// Screen size 1920px
+@media only screen and (min-width: 1920px) {
+    #miembro-hub {
+        .card-slider .card {
+            grid-template-columns: 385px 340px;
+            width: 850px;
+        }
+        .card {
+            // Content
+            .title { font-size: 28px; }
+            .description,
+            .descriptor  { font-size: 14px; }
+            .image-avatar {
+                top: -280px;
+                width: 360px;
+                left: 45px;
+            }
+        }
     }
 }
