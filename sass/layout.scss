@@ -230,6 +230,44 @@
 
 
 
+/* -------------------------------------------------
+   # Hero Slider - NavBar
+----------------------------------------------------*/
+.navbar {
+    position: absolute;
+    display: flex;
+    height: 72px;
+    width: 100%;
+    z-index: 3;
+    top: 0;
+    left: 0;
+
+    img {
+        width: 150px;
+    }
+}
+@media screen and (min-width: 768px) {
+    .navbar {
+        height: 76px;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .navbar {
+        height: 80px;
+    }
+}
+@media screen and (min-width: 1220px) {
+    .navbar {
+        height: 90px;
+    }
+}
+@media screen and (min-width: 1440px) {
+    .navbar {
+        height: 100px;
+    }
+}
+
+
 
 /* -------------------------------------------------
    # Beneficios - Sección
@@ -415,3 +453,7 @@
         .card-slider { width: calc(100% - (100% - 1520px)); }
     }
 }
+
+/* -------------------------------------------------
+   # Ventanas emergentes
+----------------------------------------------------*/
