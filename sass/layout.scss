@@ -231,39 +231,192 @@
 
 
 /* -------------------------------------------------
-   # Hero Slider - NavBar
+   # NavBar - General
 ----------------------------------------------------*/
+.heroSlider .navbar .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+
+    .icon-menu {width: 50px; justify-self: start;}
+    .logo {justify-self: center;}
+    .group-btn {justify-self: end;}
+}
 .navbar {
     position: absolute;
     display: flex;
+    justify-content: center;
     height: 72px;
     width: 100%;
     z-index: 3;
     top: 0;
     left: 0;
 
-    img {
-        width: 150px;
+    .icon-menu {
+        background: radial-gradient(circle, rgba(44,96,255,0) 0%, rgba(44,96,255,0) 70%);
+        
+        path {transition: 850ms;}
+    }
+    .icon-menu:hover {
+        background: radial-gradient(circle, rgba(44,96,255,0.5) 0%, rgba(44,96,255,0) 70%);
+    }
+    .logo { height: 36px; }
+    .links,
+    .btn-cold,
+    .btn-cold {
+        display: none;
+    }
+    // Links
+    .link {
+        font-size: 13px;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #D4E3FF;
+        margin-right: 16px;
+    }
+    .link:last-child { margin-right: 0;}
+    .link:hover {
+        color: #7BB8FF;
+        filter: drop-shadow(0 0 6px rgba(47, 205, 255,0.3));
+    }
+    @keyframes line_1 {
+        0%   { d: path("M15 32H25"); }
+        20%  { d: path("M15 32H35"); }
+        40%  { d: path("M34 32L35 32"); }
+        100% { d: path("M25.5 25.5L17.5 17.5"); }
+    }
+    @keyframes line_2 {
+        0%   { d: path("M15 25L35 25"); }
+        20%  { d: path("M15 25L35 25"); }
+        40%  { d: path("M15 25L35 25"); }
+        100% { d: path("M17.4644 32.6067L32.5356 17.5355"); }
+    }
+    @keyframes line_3 {
+        0%   { d: path("M25 18H35"); }
+        20%  { d: path("M15 18L35 18"); }
+        40%  { d: path("M15 18H16"); }
+        100% { d: path("M32.571 32.5711L25.5 25.5"); }
+    }
+    &.active .icon-menu {
+        #line_1 { animation: line_1 1500ms forwards; animation-direction: alternate;}
+        #line_2 { animation: line_2 1500ms forwards; animation-direction: alternate;}
+        #line_3 { animation: line_3 1500ms forwards; animation-direction: alternate;}
+    }
+    // https://css-tricks.com/animate-svg-path-changes-in-css/
+}
+/* -------------------------------------------------
+   # Navbar - Mobile
+----------------------------------------------------*/
+.navbar-mb {
+    $pad_size: 25px;
+
+    position: absolute;
+    display: none;
+    width: 100%;
+    z-index: 3;
+    top: 80px;
+    left: 0;
+    max-width: 420px;
+
+    .container {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: unset;
+        width: calc(100% - ($pad_size * 2));
+        background: #101c42;
+        height: auto;
+        margin: 0 $pad_size;
+        padding: $pad_size;
+        border-radius: 8px;
+    }
+    // Links
+    .links {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 16px;
+    }
+    .link {
+        font-size: 13px;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #D4E3FF;
+        margin-bottom: 16px;
+    }
+    .link:hover {
+        color: #7BB8FF;
+        filter: drop-shadow(0 0 6px rgba(47, 205, 255,0.3));
+    }
+    // Buttons
+    .group-btn {
+        display: flex;
+        justify-content: space-between;
+
+        .btn-cold { width: calc(50% - 4px); }
+    }
+    // Icons
+    .social {
+        display: flex;
+        margin-top: 24px;
+        justify-content: center;
+    }
+    a.sm-icon {
+        padding: 4px;
+        display: inline-flex;
+        margin-right: 5px;
+
+        path {
+            fill: white;
+            transition: fill 1200ms ease-in-out;
+        }
+    }
+    a.sm-icon:last-child { margin-right: 0;}
+    a.sm-icon:hover {
+        path {
+            fill: #00FDFD;
+            background-color: rgba(0, 253, 253, 0.5);
+        }
     }
 }
+.navbar-mb.active {
+    display: flex;
+}
+/* -------------------------------------------------
+   # Navbar - Responsive
+----------------------------------------------------*/
 @media screen and (min-width: 768px) {
     .navbar {
         height: 76px;
+
+        .logo {height: 40px;}
     }
 }
 @media screen and (min-width: 1024px) {
+    .heroSlider .navbar .container {
+        grid-template-columns: auto 1fr auto;
+
+        .icon-menu {display: none;}
+        .links {display: flex; margin-left: 24px;}
+    }
     .navbar {
         height: 80px;
+
+        .logo{height: 44px;}
     }
 }
 @media screen and (min-width: 1220px) {
     .navbar {
         height: 90px;
+        
+        .link {font-size: 14px;}
     }
 }
 @media screen and (min-width: 1440px) {
     .navbar {
         height: 100px;
+
+        .logo{height: 48px;}
     }
 }
 
@@ -457,3 +610,24 @@
 /* -------------------------------------------------
    # Ventanas emergentes
 ----------------------------------------------------*/
+#empezar {
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba($color: #000000, $alpha: 0.5);
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+
+    &:target {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .close {
+        color: red;
+    }
+}

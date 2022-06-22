@@ -1,6 +1,6 @@
 // Controlador
-let control = document.getElementsByClassName("controller");
-let images = document.getElementsByClassName("slide");
+let control = document.getElementsByClassName('controller');
+let images = document.getElementsByClassName('slide');
 let myTiming = 4000;
 let myCounting = 0;
 
@@ -143,80 +143,45 @@ function plusSlides(n) {
 
 function showSlides(n) {
     let i;
-    let slides = document.getElementsByClassName("myCard");
+    let slides = document.getElementsByClassName('myCard');
     if (n > slides.length) {slideIndex = 1}    
     if (n < 1) {slideIndex = slides.length}
 
     // Remueve la clase active a todas las páginas
     for (i = 0; i < slides.length; i++) {
-        slides[i].className = slides[i].className.replace(" active", "");
+        slides[i].className = slides[i].className.replace(' active', '');
     }
     // Añade la clase active a la página activada
-    slides[slideIndex-1].className += " active";
+    slides[slideIndex-1].className += ' active';
     switch(slideIndex) {
         case 1:
-            slides[0].style.gridArea = "card-1";
-            slides[1].style.gridArea = "card-2";
-            slides[2].style.gridArea = "card-3";
-            slides[3].style.gridArea = "card-4";
+            slides[0].style.gridArea = 'card-1';
+            slides[1].style.gridArea = 'card-2';
+            slides[2].style.gridArea = 'card-3';
+            slides[3].style.gridArea = 'card-4';
             break;
         case 2:
-            slides[0].style.gridArea = "card-4";
-            slides[1].style.gridArea = "card-1";
-            slides[2].style.gridArea = "card-2";
-            slides[3].style.gridArea = "card-3";
+            slides[0].style.gridArea = 'card-4';
+            slides[1].style.gridArea = 'card-1';
+            slides[2].style.gridArea = 'card-2';
+            slides[3].style.gridArea = 'card-3';
             break;
         case 3:
-            slides[0].style.gridArea = "card-3";
-            slides[1].style.gridArea = "card-4";
-            slides[2].style.gridArea = "card-1";
-            slides[3].style.gridArea = "card-2";
+            slides[0].style.gridArea = 'card-3';
+            slides[1].style.gridArea = 'card-4';
+            slides[2].style.gridArea = 'card-1';
+            slides[3].style.gridArea = 'card-2';
             break;
         case 4:
-            slides[0].style.gridArea = "card-2";
-            slides[1].style.gridArea = "card-3";
-            slides[2].style.gridArea = "card-4";
-            slides[3].style.gridArea = "card-1";
+            slides[0].style.gridArea = 'card-2';
+            slides[1].style.gridArea = 'card-3';
+            slides[2].style.gridArea = 'card-4';
+            slides[3].style.gridArea = 'card-1';
     }
 }
 
-/*let slideIndex = 1;
-//showSlides(slideIndex); // Se ejecuta la función :D
-var time = 3000; // Tiempo del slider
-
-function currentSlide(n) {
-    showSlides(slideIndex = n);
+function toggleMenu() {
+    // Activa y desactiva la clase active
+    document.getElementById('navbar-mb').classList.toggle('active');
+    document.getElementById('navbar').classList.toggle('active');
 }
-
-function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("slide"); // Imágenes
-    let controller = document.getElementsByClassName("controller"); // Controlador
-    // Si 
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
-    // Ocultar imágenes que no deberían verse
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    for (i = 0; i < slides.length; i++) {
-        slides[i].className = slides[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";
-    slides[slideIndex-1].className += " active";
-
-    // Reemplazar clase activa por inactiva
-    for (i = 0; i < controller.length; i++) {
-        controller[i].className = controller[i].className.replace(" active", "");
-    }
-    controller[slideIndex-1].className += " active";
-
-    setTimeout(newJeje, time);
-
-    function newJeje() {
-        console.log(slideIndex++);
-    }
-}
-function nextImage() {
-    console.log(slideIndex++);
-}*/

@@ -3,6 +3,9 @@
     font-family: 'Montserrat', sans-serif;
     text-rendering: optimizeLegibility;
 }
+html {
+    scroll-behavior: smooth;
+}
 
 @import 'elements.scss',
         'components.scss',
