@@ -1,0 +1,45 @@
+/* -------------------------------------------------
+   # Colors
+----------------------------------------------------*/
+
+// Color primary
+$clr-primary-1: #64FFFF;
+$clr-primary-2: #00FDFD;
+$clr-primary-3: #13D8D8;
+$clr-primary: $clr-primary-2;
+
+// Color secondary
+$clr-secondary-1: #3A95FF;
+$clr-secondary-2: #1468E5;
+$clr-secondary-3: #094195;
+$clr-secondary: $clr-secondary-2;
+
+// Purple
+$clr-purple-1: #8371f7;
+$clr-purple-2: #735CFF;
+$clr-purple-3: #5642d6;
+$clr-purple: $clr-purple-2;
+
+// Color light
+$clr-light-1: #ffffff;
+$clr-light-2: #eff3ff;
+$clr-light-2: #d6e0fe;
+$clr-light: $clr-light-2;
+
+// Color dark
+$clr-dark-1: #091848;
+$clr-dark-2: #071130;
+$clr-dark-3: #060D24;
+$clr-dark: $clr-dark-2;
+
+// Gradients
+$gradient-polar:linear-gradient(145deg, #2461ff, #735cff);
+$gradient-polar-webkit:-webkit-linear-gradient(145deg, #2461ff, #735cff);
+$gradient-polar__btn:linear-gradient(145deg, #2461ff, #735cff, #4076fe);
+$gradient-cold:linear-gradient(145deg, #24AFFF, #5CFFFF);
+$gradient-transparent__btn:linear-gradient(145deg, #2461ff00, #2461ff00, #2461ff00, #2461ff, #735cff);
+
+::selection {
+    color: #4536a1;
+    background: rgba(131, 113, 247,0.2);
+}

@@ -1,0 +1,223 @@
+/* -------------------------------------------------
+   # Benefits - Card
+----------------------------------------------------*/
+#beneficios {
+    .card {
+        padding: 16px 20px 16px 16px;
+        display: flex;
+        background: white;
+        width: 100%;
+        max-width: 380px;
+        border-radius: 4px;
+        gap: 6px;
+        filter: drop-shadow(0 3px 8px rgba(24, 144, 255, 10%));
+
+        img {
+            width: 60px;
+        }
+        .content {
+            display: flex;
+            align-items: self-start;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .title {
+            font-size: 16px;
+            color: #1B1740;
+            margin: 0 0 2px 0;
+        }
+        .description {
+            font-size: 12px;
+            color: #8285A4;
+            margin: 0;
+        }
+    }
+}
+@media only screen and (min-width: 768px) {
+    #beneficios {
+        .card {
+            max-width: none;
+        }
+    }
+}
+@media only screen and (min-width: 1024px) {
+    #beneficios {
+        .card {
+            padding: 18px;
+
+            // Content
+            .title { font-size: 17px; }
+            .description { font-size: 13px; }
+        }
+    }
+}
+@media only screen and (min-width: 1440px) {
+    #beneficios {
+        .card {
+            padding: 20px;
+            
+            .title { font-size: 18px; }
+            .description { font-size: 14px; }
+        }
+    }
+}
+
+/* -------------------------------------------------
+   # Miembros Hub - Card
+----------------------------------------------------*/
+#miembro-hub {
+    // The Card
+    .card-slider .card {
+            width: 310px;
+            padding: 25px 20px 20px;
+            background: white;
+            border-radius: 6px;
+            display: grid;
+            grid-template-columns: auto;
+            grid-template-rows: repeat(3, auto);
+            position: relative;
+            filter: drop-shadow(0 3px 8px rgba(24, 144, 255, 10%));
+    }
+    // The Content
+    .card .title,
+    .card .description,
+    .card .descriptor { margin: 0; }
+    .card {
+        .title {
+            font-size: 16px;
+            color: #3B3F64;
+            margin-bottom: 4px;
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }
+        .description {
+            font-size: 12px;
+            color: #737799;
+            margin-bottom: 12px;
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }
+        .descriptor {
+            font-size: 12px;
+            color: #2B1178;
+            grid-column: 1/2;
+            grid-row: 3/4;
+        }
+        .image-avatar {
+            width: 240px;
+            position: absolute;
+            top: -320px;
+            left: 35px;
+        }
+    }
+    // Card active
+    .card.active {
+        background: $gradient-polar;
+
+        .title       { color: white;   }
+        .description { color: #B4C9FF; }
+    }
+}
+// Screen size 768px
+@media only screen and (min-width: 768px) {
+    #miembro-hub {
+        .card-slider .card {
+            width: 580px;
+            grid-template-columns: 270px 260px;
+        }
+        .card {
+            .title { font-size: 18px; }
+            .image-avatar {
+                width: 260px;
+                top: -160px;
+                right: 0;
+                grid-column: 2/3;
+                grid-row: 1/4;
+            }
+        }
+    }
+}
+// Screen size 1024px
+@media only screen and (min-width: 1024px) {
+    #miembro-hub {
+        .card-slider .card {
+            grid-template-columns: 300px 300px;
+            padding: 25px;
+            width: 624px;
+            height: 230px;
+        }
+        // Content
+        .card {
+            .title { font-size: 20px; }
+            .description,
+            .descriptor  { font-size: 13px; }
+            .image-avatar {
+                width: 280px;
+                top: -168px;
+                left: 10px;
+            }
+        }
+    }
+}
+// Screen size 1220px
+@media only screen and (min-width: 1220px) {
+    #miembro-hub {
+        .card-slider .card {
+            grid-template-columns: 360px 340px;
+            padding: 35px;
+            width: 704px;
+            height: 230px;
+        }
+        .card {
+            // Content
+            .title { font-size: 22px; }
+            .description,
+            .descriptor  { font-size: 14px; }
+            .image-avatar {
+                top: -218px;
+                width: 310px;
+                left: 5px;
+            }
+        }
+    }
+}
+// Screen size 1440px
+@media only screen and (min-width: 1440px) {
+    #miembro-hub {
+        .card-slider .card {
+            grid-template-columns: 385px 340px;
+            width: 780px;
+        }
+        .card {
+            // Content
+            .title { font-size: 24px; }
+            .description,
+            .descriptor  { font-size: 14px; }
+            .image-avatar {
+                top: -245px;
+                width: 330px;
+                left: 20px;
+            }
+        }
+    }
+}
+// Screen size 1920px
+@media only screen and (min-width: 1920px) {
+    #miembro-hub {
+        .card-slider .card {
+            grid-template-columns: 385px 340px;
+            width: 850px;
+        }
+        .card {
+            // Content
+            .title { font-size: 28px; }
+            .description,
+            .descriptor  { font-size: 14px; }
+            .image-avatar {
+                top: -285px;
+                width: 360px;
+                left: 45px;
+            }
+        }
+    }
+}

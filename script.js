@@ -102,7 +102,7 @@ function typeWriter() {
     }
     // Cálculo de tiempo restante para pasar al siguiente slide
     let newTiming = myTiming - (temas[temaSelected].length * speed);
-    // Ejecutar función que añade caracteres mientras haya caracteres por agregar
+    // Ejecutar función que añade caracteres mientras haya caracteres por agregar 
     if(temaCountCharacter < temas[temaSelected].length) {
         // Añade una letra hasta completar la palabra
         mi_tema.innerHTML += temas[temaSelected].charAt(temaCountCharacter);
@@ -180,8 +180,24 @@ function showSlides(n) {
     }
 }
 
+// Menú del Navbar
 function toggleMenu() {
     // Activa y desactiva la clase active
     document.getElementById('navbar-mb').classList.toggle('active');
     document.getElementById('navbar').classList.toggle('active');
+}
+
+// Esconder Navbar al hacer scroll
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+        document.getElementById("navbar").style.position = "fixed";
+        document.getElementById("navbar").style.backgroundColor = "#060D24";
+        document.getElementById("navbar-mb").style.position = "fixed";
+    } else {
+        document.getElementById("navbar").style.position = "absolute";
+        document.getElementById("navbar").style.backgroundColor = "transparent";
+        document.getElementById("navbar-mb").style.position = "absolute";
+    }
 }

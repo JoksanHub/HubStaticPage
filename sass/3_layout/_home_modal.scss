@@ -1,0 +1,82 @@
+/* -------------------------------------------------
+   # Ventanas emergentes
+----------------------------------------------------*/
+
+.empezar {
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba($color: #612C8A, $alpha: 0.1);
+    visibility: hidden;
+    opacity: 0;
+    padding: 80px 0;
+    
+    // Modal
+    overflow-x: hidden;
+    overflow-y: auto;
+    .container {position: relative;}
+
+    &:target {
+        visibility: visible;
+        opacity: 1;
+    }
+    .close {
+        position: absolute;
+        top: 10px;
+        right: 40px;
+        text-decoration: none;
+        color: white;
+        font-size: 10px;
+        text-transform: uppercase;
+        transition: color 500ms;
+    }
+    .close:hover {
+        color: $clr-secondary-1;
+    }
+
+    .container > .image {
+        height: 240px;
+        overflow: hidden;
+        border-radius: 4px 4px 0 0;
+
+        img {height: 100%;}
+    }
+    .content {
+        padding: 28px 25px;
+        background: white;
+        border-radius: 0 0 4px 4px;
+
+        .title, .description {margin: 0;}
+        .title {
+            background: $gradient-polar;
+            background-clip: text;
+            background: $gradient-polar-webkit;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-family: 'Raleway', sans-serif;
+        }
+        h2.title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        h3.title {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+        .description {
+            font-size: 13px;
+            font-weight: 400;
+            color:#6D7AA9;
+            margin-bottom: 24px;
+        }
+    }
+
+    
+}
+#empezar .description {
+    margin-bottom: 50px;
+}

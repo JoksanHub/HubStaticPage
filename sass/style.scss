@@ -9,7 +9,8 @@ html {
 
 @import 'elements.scss',
         'components.scss',
-        'layout';
+        'layout',
+        './2_components/modal_inputs';
 
 body {
     margin: 0;

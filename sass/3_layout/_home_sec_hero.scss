@@ -1,0 +1,230 @@
+.heroSlider {
+    width: 100%;
+    height: 90vh;
+    min-height: 520px;
+    background: $clr-dark-3;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+
+    // Controls
+    // Animation
+    @keyframes controllerAnimation {
+        0% { width: 0%;   }
+        100%   { width: 100%; }
+    }
+
+    .controls {
+        position: absolute;
+        bottom: 0;
+        z-index: 3;
+        display: flex;
+        gap: 10px;
+        margin-bottom: 48px;
+    }
+    .controller {
+        width: 50px;
+        padding: 8px 0;
+        border-color: transparent;
+
+        &:hover {
+            filter: drop-shadow(0 4px 16px #735cff99);
+            //cursor: pointer;
+
+            &.controller--container{
+                background: rgba(131, 113, 247,0.5);
+            }
+        }
+
+        &.active .controller--slider {
+            width: 0%;
+            height: 100%;
+            background: $clr-purple-3;
+            opacity: 1;
+            animation: controllerAnimation 4s 1 ease-in-out forwards;
+        }
+    }
+
+    .controller--container {
+        height: 4px;
+        background: rgba(131, 113, 247,0.3);
+
+        &:hover {
+            filter: drop-shadow(0 4px 16px #725cff);
+        }
+    }
+
+    // Contenedor
+    .container {
+        position: absolute;
+        top: 0;
+        z-index: 2;
+
+        padding: 0 25px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        max-width: 1440px;
+    }
+
+    // Imagen del slider
+    @keyframes transitionAnimation {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+    }
+
+    .img_background {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 520px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        z-index: 0;
+        //transition: opacity 500ms;
+
+        .slide{
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            height: 100%;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 500ms;
+        }
+        .slide.active {
+            opacity: 1;
+            //animation: transitionAnimation 500ms ease-in-out forwards;
+        }
+        
+    }
+
+    // Degradados sobre fotografía
+    .gradients {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        z-index: 1;
+
+        .no-gradient { background: $clr-dark-3; }
+
+        .gradient {
+            position: absolute;
+            width: 100%;
+            height: 520px;
+
+            &.--1 { background: linear-gradient(90deg, #060d2480 0%, #060d2400 70%);  }
+            &.--2 { background: linear-gradient(0deg, #060d24ff 0%, #060d2400 70%);   }
+            &.--3 { background: linear-gradient(270deg, #060d2480 0%, #060d2400 70%); }
+        }
+    }
+}
+
+// Degradados sobre imagen
+@media only screen and (min-width: 700px) {
+    .heroSlider {
+        .gradients {
+            .gradient {
+                &.--1 { background: linear-gradient( 90deg, #060d24ff 10%, #060d2400 70%); }
+                &.--3 { background: linear-gradient(270deg, #060d24ff 10%, #060d2400 70%); }
+            }
+        }
+    }
+}
+
+// Pantallas de 768px a 1023px
+@media only screen and (min-width: 768px) {
+    .heroSlider {
+        height: 100vh;
+        max-height: 560px;
+        
+        .container {
+            justify-content: flex-start;
+            align-items: center;
+            padding: 0 40px;
+        }
+        .img_background {
+            height: 100%;
+            justify-content: flex-end;
+            .slide {
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+        }
+        .gradients {
+            display: grid;
+            grid-template-columns: 1fr 4fr;
+            grid-template-areas: "num-1 num-2";
+
+            .no-gradient { grid-area: num-1; }
+
+            .gradient {
+                height: 100%;
+                grid-area: num-2;
+                &.--3 { display: none; }
+            }
+        }
+    }
+}
+
+// Pantallas de 1024px a 1219px
+@media only screen and (min-width: 1024px) {
+    .heroSlider {
+        max-height: 580px;
+        min-height: 560px;
+        
+        .container {
+            padding: 0 50px;
+        }
+        .gradients { grid-template-columns: 1fr 2fr; }
+    }
+}
+
+// Pantallas de 1220px a 1439px
+@media only screen and (min-width: 1220px) {
+    .heroSlider {
+        max-height: 650px;
+        min-height: 600px;
+        
+        .container {
+            padding: 0 60px;
+        }
+    }
+}
+
+// Pantallas de 1440px a 1919px
+@media only screen and (min-width: 1440px) {
+    .heroSlider {
+        max-height: 730px;
+        min-height: 660px;
+        
+        .container {
+            padding: 0 80px;
+        }
+        .controls {
+            margin-bottom: 56px;
+        }
+    }
+}
+
+// Pantallas de 1920px en adelante
+@media only screen and (min-width: 1920px) {
+    .heroSlider {
+        max-height: 974px;
+        min-height: 870px;
+        
+        .container {
+            padding: 0 30px;
+        }
+        .controls {
+            margin-bottom: 64px;
+        }
+    }
+}

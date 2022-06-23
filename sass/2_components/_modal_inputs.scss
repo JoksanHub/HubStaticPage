@@ -1,0 +1,177 @@
+/* -------------------------------------------------
+   # Modal - Input radio
+----------------------------------------------------*/
+form {
+    input,
+    select {
+        margin-bottom: 6px;
+        width: 100%;
+    }
+    
+    .group-btn {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding-top: 16px;
+        gap: 8px;
+        .btn {width: 100%;}
+    }
+    .group-btn.lg {
+        display: flex;
+        flex-direction: column;
+    }
+}
+// Temas
+form .cuadros {
+    display: grid;
+    grid-template-areas:
+        "uno dos"
+        "tres cuatro";
+    gap: 10px;
+
+    .input-radio:nth-child(1) {grid-area: uno;}
+    .input-radio:nth-child(2) {grid-area: dos;}
+    .input-radio:nth-child(3) {grid-area: tres;}
+    .input-radio:nth-child(4) {grid-area: cuatro;}
+    
+    .input-radio {
+        height: auto;
+        position: relative;
+        display: inline-flex;
+        background-color:#E3E6FA;
+        border-radius: 4px;
+        overflow: hidden;
+        transition: all 800ms;
+    }
+    .input-radio {
+        .image,
+        .titulo,
+        .check,
+        input {
+            transition: all 800ms;
+        }
+    }
+    .input-radio .titulo { color: $clr-dark-1;}
+    .input-radio:hover .image {
+        opacity: 0.7;
+    }
+    .image::after {
+        content: url('./icons/icon.-check.svg');
+        position: relative;
+        top: 11px;
+        bottom: 1px;
+        z-index: 9;
+    }
+    .input-radio:hover {
+        cursor: pointer;
+    }
+    .input-radio .titulo {
+        position: absolute;
+        bottom: 0px;
+        text-align: center;
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+        width: 100%;
+        padding: 0 12px 10px;
+        margin: 0;
+        z-index: 6;
+    }
+    .input-radio .image { width: 100%;z-index: 5;}
+    .input-radio input[type="radio"] {
+        position: absolute;
+        visibility: hidden;
+    }
+    .check {
+        display: none;
+    }
+    input[type="radio"]:checked ~ .check {
+        position: absolute;
+        display: block;
+        top: 50px;
+        right: 50px;
+        z-index: 6;
+        width: 30px;
+    }
+    input[type="radio"]:checked ~ .image {
+        opacity: 0.5;
+    }
+}
+
+/* -------------------------------------------------
+   # Modal - Input checkbox
+----------------------------------------------------*/
+// Temas
+form .cuadros {
+
+    .input-checkbox:nth-child(1) {grid-area: uno;}
+    .input-checkbox:nth-child(2) {grid-area: dos;}
+    .input-checkbox:nth-child(3) {grid-area: tres;}
+    .input-checkbox:nth-child(4) {grid-area: cuatro;}
+    
+    .input-checkbox {
+        height: auto;
+        position: relative;
+        display: inline-flex;
+        background-color:#096DD9;
+        color: white;
+        border-radius: 4px;
+        overflow: hidden;
+        transition: all 800ms;
+    }
+    .input-checkbox {
+        .image,
+        .titulo,
+        .check,
+        input {
+            transition: all 800ms;
+        }
+    }
+    .input-checkbox:hover .image {
+        opacity: 0.7;
+    }
+    .image::after {
+        content: url('./icons/icon.-check.svg');
+        position: relative;
+        top: 11px;
+        bottom: 1px;
+        z-index: 9;
+    }
+    .input-checkbox:hover {
+        background-color: $clr-purple-1;
+        cursor: pointer;
+    }
+    .input-checkbox .titulo {
+        position: absolute;
+        bottom: 0px;
+        text-align: center;
+        font-size: 12px;
+        font-weight: 400;
+        width: 100%;
+        padding: 0 10px 10px;
+        margin: 0;
+        z-index: 6;
+    }
+    .input-checkbox .image { width: 100%;z-index: 5;}
+    .input-checkbox input[type="checkbox"] {
+        position: absolute;
+        visibility: hidden;
+    }
+    .check {
+        display: none;
+    }
+    input[type="checkbox"]:checked ~ .check {
+        position: absolute;
+        display: block;
+        top: 50px;
+        right: 50px;
+        z-index: 6;
+        width: 30px;
+    }
+    input[type="checkbox"]:checked ~ .image {
+        opacity: 0.5;
+    }
+}
+form .group-inp {
+    display: flex;
+    gap: 6px;
+}

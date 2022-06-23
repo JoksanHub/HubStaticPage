@@ -1,0 +1,86 @@
+/* -------------------------------------------------
+   # Miembro Hub - Sección
+----------------------------------------------------*/
+#miembro-hub {
+    padding: 60px 0 600px 0;
+    display: flex;
+    justify-content: center;
+    background: #F6F9FF;
+
+    .container {
+        margin-right: 0;
+        width: 100%;
+    }
+    .title-secondary {
+        margin-bottom: 0;
+    }
+    .card-slider {
+        gap: 12px;
+        display: grid;
+        grid-template-columns:
+            auto auto auto auto;
+        grid-template-areas:
+            "card-1 card-2 card-3 card-4";
+        width: calc(100% - 25px);
+        padding-top: 320px;
+        position: absolute;
+        overflow-x: clip;
+    }
+    .group-btn { margin-top: 546px;}
+    .card:nth-child(1) { grid-area: card-1; }
+    .card:nth-child(2) { grid-area: card-2; }
+    .card:nth-child(3) { grid-area: card-3; }
+    .card:nth-child(4) { grid-area: card-4; }
+}
+// Pantallas de 768px en adelante
+@media only screen and (min-width: 768px) {
+    #miembro-hub {
+        padding: 80px 0 300px 0;
+        .card-slider {
+            width: calc(100% - 40px);
+            padding-top: 40px;
+        }
+        .group-btn {
+            margin-top: 266px;
+        }
+    }
+}
+// Pantallas de 1024px en adelante
+@media only screen and (min-width: 1024px) {
+    #miembro-hub {
+        padding: 100px 0 80px 0;
+
+        .card-slider { width: calc(100% - 50px); }
+        .group-btn { margin-top: 286px; }
+    }
+}
+// Pantallas de 1220px en adelante
+@media only screen and (min-width: 1220px) {
+    #miembro-hub {
+        padding: 120px 0 80px 0;
+
+        .card-slider {
+            width: calc(100% - 60px);
+            padding-top: 70px;
+        }
+        .group-btn { margin-top: 316px;}
+    }
+}
+// Pantallas de 1440px en adelante
+@media only screen and (min-width: 1440px) {
+    #miembro-hub {
+        padding: 160px 0 100px 0;
+        .card-slider {
+            width: calc(100% - 80px);
+            padding-top: 80px;
+        }
+        .group-btn { margin-top: 326px;}
+    }
+}
+// Pantallas de 1600px en adelante
+@media screen and (min-width: 1601px) {
+    #miembro-hub {
+        .container { margin-left: calc(100% - 1600px); }
+        .card-slider { width: calc(100% - (100% - 1520px)); }
+    }
+}
