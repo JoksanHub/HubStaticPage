@@ -1,0 +1,382 @@
+@use '../1_elements/colors';
+
+/* -------------------------------------------------
+   # Ventanas emergentes - General
+----------------------------------------------------*/
+.modal {
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba($color: $clr-secondary-3, $alpha: 0.3);
+    visibility: hidden;
+    opacity: 0;
+    padding: 80px 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    // Contenedor
+    >.container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    >.container .content,
+    >.container .image {max-width: 380px;}
+    &:target {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+
+
+
+
+/* -------------------------------------------------
+   # Ventanas emergentes - Imagen
+----------------------------------------------------*/
+// Image
+.modal >.container > .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 240px;
+    overflow: hidden;
+    border-radius: 4px 4px 0 0;
+    width: 100%;
+    position: relative;
+
+    img {width: 100%;}
+}
+.modal .image .color {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: linear-gradient(180deg,#2C60FF00,#2C60FF7D),linear-gradient(0deg,#6E24DB00,#6E24DB7D);
+}
+.modal .image .close {
+    position: absolute;
+    top: 16px;
+    left: 20px;
+    text-decoration: none;
+    font-size: 9px;
+    text-transform: uppercase;
+    transition: color 500ms;
+    padding: 6px;
+    border-radius: 4px;
+    line-height: 10px;
+    height: auto;
+    width: 58px;
+    font-weight: 500;
+    letter-spacing: 0.03rem;
+}
+
+
+
+
+
+/* -------------------------------------------------
+   # Ventanas emergentes - Contenido
+----------------------------------------------------*/
+// Contenido
+.modal .content .the-container {padding: 25px;}
+.modal .content {
+    background: white;
+    border-radius: 0 0 4px 4px;
+    overflow: hidden;
+
+    img { width: 100%;}
+
+    // Titulo
+    .title {
+        background: $gradient-polar;
+        background-clip: text;
+        background: $gradient-polar-webkit;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-family: 'Raleway', sans-serif;
+    }
+    h2.title {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 4px;
+    }
+    h3.title {
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+
+    // Descripción
+    .the-container .description {
+        font-size: 13px;
+        font-weight: 400;
+        color:#6D7AA9;
+        margin-bottom: 24px;
+    }
+
+    // Caja - Descripción
+    .box .description {
+        font-size: 13px;
+        font-weight: 400;
+        color:#6D7AA9;
+        padding: 25px;
+        background: #E3E6FA;
+        border-bottom: 1px solid #D0D3ED;
+    }
+    .box .description .-txtDark { color: #323E6C;}
+
+    // Caja - Inicio de sesión
+    .box .the-login {
+        font-size: 14px;
+        font-weight: 400;
+        color:#323E6C;
+        padding: 14px 25px 20px;
+        background: #E3E6FA;
+        text-align: center;
+    }
+    .box .the-link {
+        color: #3A95FF;
+        transition: color 800ms;
+        text-decoration: none;
+        }
+    .box .the-link:hover {
+        color: #1468E5;
+    }
+    // Caja - Descriptor
+    .box .descriptor {
+        padding: 5px 10px;
+        font-size: 11px;
+        background: #1890FF;
+        color: white;
+        border-radius: 3px;
+        margin-right: 5px;
+    }
+}
+
+/* -------------------------------------------------
+   # Ventanas emergentes - Páginas especiales
+----------------------------------------------------*/
+#empezar .description {
+    margin-bottom: 50px;
+}
+
+
+
+
+
+/* -------------------------------------------------
+   # Responsive design
+----------------------------------------------------*/
+@media only screen and (min-width: 768px){
+    .modal > .container {
+        width: 380px;
+        padding: 0;
+    }
+    // Ventanas emergentes - Contenido
+    .modal .content .the-container {
+        padding: 25px;
+
+        // Contenido - Títulos
+        h2.title {
+            font-size: 25px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+        h3.title {
+            font-size: 19px;
+            margin-bottom: 8px;
+        }
+    }
+    // Ventanas emergentes - Páginas especiales
+}
+@media only screen and (min-width: 1024px){
+    // Ventanas emergentes - Contenido
+    .modal .content .the-container {
+        padding: 28px;
+
+        // Contenido - Títulos
+        h2.title {
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+        h3.title {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+        // Contenidos - Descripción
+        .description { font-size: 14px; }
+    }
+    // Box
+    .modal .content .box .description {
+        padding: 25px 26px;
+    }
+}
+@media only screen and (min-width: 1220px){
+    // Ventanas emergentes - General
+    .modal > .container {
+        flex-direction: row;
+        width: 780px;
+    }
+    .modal > .container > .image {
+        height: auto;
+        border-radius: 4px 0 0 4px;
+    }
+    .modal > .container > .content {
+        height: 608px;
+        border-radius: 0 4px 4px 0;
+    }
+
+    // Ventanas emergentes - Contenido
+    .modal .content .the-container {
+        padding: 38px 32px;
+
+        // Contenido - Títulos
+        h2.title {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+        h3.title {
+            font-size: 21px;
+            margin-bottom: 8px;
+        }
+    }
+    // Box
+    .modal .content .box .description {
+        padding: 25px 32px;
+    }
+
+    // Páginas especiales: Empezar
+    #empezar.modal > .container > .image,
+    #empezar.modal > .container > .content {
+        height: 478px;
+    }
+    #empezar .description {margin-bottom: 200px;}
+
+    // Páginas especiales: Página 1
+    #registro-1.modal > .container > .image,
+    #registro-1.modal > .container > .content {
+        height: 572px;
+    }
+    // Páginas especiales: Página 2 y 4
+    #registro-2.modal > .container > .image,
+    #registro-2.modal > .container > .content,
+    #registro-4.modal > .container > .image,
+    #registro-4.modal > .container > .content {
+        height: 594px;
+    }
+
+    // Páginas especiales: Página 3
+    #registro-3.modal       > .container .image,
+    #registro-3.modal       > .container > .content,
+    #registro-empresa.modal > .container .image,
+    #registro-empresa.modal > .container > .content {
+        height: 640px;
+    }
+    #registro-3.modal       > .container > .image img,
+    #registro-empresa.modal > .container > .image img {
+        height: 100%;
+    }
+    // Páginas especiales: Página 6
+    #registro-6.modal > .container .image,
+    #registro-6.modal > .container > .content {
+        height: 530px;
+    }
+}
+@media only screen and (min-width: 1440px){
+    // Ventanas emergentes - Contenido
+    .modal .content .the-container {
+        padding: 36px;
+
+        // Contenido - Títulos
+        h2.title {
+            font-size: 30px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+        h3.title {
+            font-size: 22px;
+            margin-bottom: 8px;
+        }
+        // Contenidos - Descripción
+        .description { font-size: 15px; }
+    }
+    // Box
+    .modal .content .box .description {
+        padding: 25px 36px;
+    }
+}
+@media only screen and (min-width: 1920px){
+    .modal .container {
+        width: 860px;
+    }
+    .modal > .container .content,
+    .modal > .container .image {
+        max-width: 430px;
+    }
+    // Ventanas emergentes - Contenido
+    .modal .content .the-container {
+        padding: 40px;
+
+        // Contenido - Títulos
+        h2.title {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+        h3.title {
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+        // Contenidos - Descripción
+        .description { font-size: 16px; }
+    }
+    // Box
+    .modal .content .box .description {
+        padding: 25px 40px;
+    }
+    // Páginas especiales: Empezar
+    #empezar.modal > .container > .image,
+    #empezar.modal > .container > .content {
+        height: 503px;
+    }
+    // Páginas especiales: Página 1
+    #registro-1.modal > .container > .image,
+    #registro-1.modal > .container > .content {
+        height: 597px;
+    }
+    // Páginas especiales: Página 2 y 4
+    #registro-2.modal > .container > .image,
+    #registro-2.modal > .container > .content,
+    #registro-4.modal > .container > .image,
+    #registro-4.modal > .container > .content {
+        height: 643;
+    }
+    // Páginas especiales: Página 3 y registro de empresa
+    #registro-3.modal > .container .image,
+    #registro-3.modal > .container > .content,
+    #registro-empresa.modal > .container .image,
+    #registro-empresa.modal > .container > .content {
+        height: 665px;
+    }
+    // Páginas especiales: Página 5
+    #registro-5.modal > .container > .image,
+    #registro-5.modal > .container > .content {
+        height: 623px;
+    }
+    // Páginas especiales: Página 6
+    #registro-6.modal > .container > .image,
+    #registro-6.modal > .container > .content {
+        height: 571px;
+    }
+}

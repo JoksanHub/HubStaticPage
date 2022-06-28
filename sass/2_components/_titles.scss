@@ -10,7 +10,8 @@
     max-width: 400px;
     margin-bottom: 96px;
 
-    .title {
+    // Titulo
+    >.title {
         font-family: Raleway;
         font-size: 26px;
         background: -webkit-linear-gradient(#24AFFF, #5CFFFF);
@@ -19,28 +20,30 @@
         -webkit-text-fill-color: transparent;
         margin: 8px 0;
     }
-    .description {
+    // Descripción
+    >.description {
         font-size: 14px;
         color: white;
         font-weight: 300;
         margin: 4px 0;
     }
-    .tema {
+    >.description .tema {
         color: $clr-secondary-1;
         font-weight: 700;
         font-style: italic;
     }
-    .group_btn {
+    // Botones
+    >.group_btn {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 6px;
         gap: 6px;
         margin-top: 24px;
 
-        .btn {
-            width: 100%;
-            justify-content: center;
-        }
+    }
+    >.group_btn .btn {
+        width: 100%;
+        justify-content: center;
     }
 }
 
@@ -48,25 +51,27 @@
     .main-title {
         margin-bottom: 0;
 
-        .title {
+        // Título
+        >.title {
             font-size: 32px;
             margin: 12px 0;
         }
-        .description {
+        // Descripción
+        >.description {
             font-size: 16px;
         }
-        .group_btn {
+        // Botones
+        >.group_btn {
             display: flex;
             gap: 0;
             grid-gap: 0;
             margin-top: 28px;
-    
-            .btn {
-                width: auto;
-            }
-            .btn:first-child{
-                margin-right: 12px;
-            }
+        }
+        >.group_btn .btn {
+            width: auto;
+        }
+        >.group_btn .btn:first-child{
+            margin-right: 12px;
         }
     }
 }
@@ -75,14 +80,17 @@
     .main-title {
         max-width: 415px;
 
-        .title {
+        // Título
+        >.title {
             font-size: 34px;
             margin: 14px 0;
         }
-        .description {
+        // Descripción
+        >.description {
             font-size: 17px;
         }
-        .group_btn {
+        // Botones
+        >.group_btn {
             margin-top: 32px;
         }
     }
@@ -92,14 +100,17 @@
     .main-title {
         max-width: 450px;
 
-        .title {
+        // Título
+        >.title {
             font-size: 36px;
             margin: 16px 0;
         }
-        .description {
+        // Descripción
+        >.description {
             font-size: 18px;
         }
-        .group_btn {
+        // Botones
+        >.group_btn {
             margin-top: 36px;
         }
     }
@@ -109,14 +120,17 @@
     .main-title {
         max-width: 524px;
         
-        .title {
+        // Título
+        >.title {
             font-size: 40px;
             margin: 18px 0;
         }
-        .description {
+        // Descripción
+        >.description {
             font-size: 19px;
         }
-        .group_btn {
+        // Botones
+        >.group_btn {
             margin-top: 40px;
         }
     }
@@ -126,14 +140,17 @@
     .main-title {
         max-width: 580px;
 
-        .title {
+        // Título
+        >.title {
             font-size: 46px;
             margin: 20px 0;
         }
-        .description {
+        // Descripción
+        >.description {
             font-size: 20px;
         }
-        .group_btn {
+        // Botones
+        >.group_btn {
             margin-top: 48px;
         }
     }
@@ -150,9 +167,8 @@
     max-width: 340px;
     margin-bottom: 20px;
 
-    // DESCRIPTOR
-    .descriptor {
-        // Font
+    // Descriptor
+    >.descriptor {
         font-size: 10px;
         font-weight: 800;
         letter-spacing: 4px;
@@ -160,38 +176,34 @@
         margin: 0 0 4px 0;
         color: #1B1740;
     }
-    // TITLE
-    .title {
-        // Font
+    // Título
+    >.title {
         font-size: 22px;
         background: linear-gradient(145deg,#2461FF,#735CFF);
         background-clip: text;
         background: -webkit-linear-gradient(145deg,#2461FF,#735CFF);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-
-        // Sizes
         margin: 0 0 8px 0;
     }
-    // DESCRIPTION
-    .description {
+    // Descripción
+    >.description {
         font-size: 14px;
         color: #585C87;
-
-        // Sizes
         margin: 0;
     }
 }
+// VARIANTE: Título largo
 .title-secondary.-lg {
     max-width: 360px;
 }
 
 @media only screen and (min-width: 410px) {
-    // Clase específica para centrar el texto
+    // VARIANTE: Título centrado
     .title-secondary.-cen {
-        .descriptor,
-        .title,
-        .description {
+        >.descriptor,
+        >.title,
+        >.description {
             text-align: center;
         }
     }
@@ -201,10 +213,11 @@
         max-width: 360px;
         margin-bottom: 20px;
 
-        .descriptor { font-size: 11px; }
-        .title { font-size: 24px; }
-        .description { font-size: 15px; }
+        >.descriptor  { font-size: 11px; } // Descriptor
+        >.title       { font-size: 24px; } // Título
+        >.description { font-size: 15px; } // Descripción
     }
+    // VARIANTE: Título largo
     .title-secondary.-lg {
         max-width: 380px;
     }
@@ -215,8 +228,8 @@
         max-width: 400px;
         margin-bottom: 28px;
 
-        .title { font-size: 28px; }
-        .description { font-size: 16px; }
+        >.title       { font-size: 28px; } // Título
+        >.description { font-size: 16px; } // Descripción
     }
     .title-secondary.-lg {
         max-width: 420px;
@@ -228,10 +241,11 @@
         max-width: 430px;
         margin-bottom: 34px;
 
-        .descriptor { font-size: 12px; }
-        .title { font-size: 32px; }
-        .description { font-size: 17px; }
+        >.descriptor  { font-size: 12px; } // Descriptor
+        >.title       { font-size: 32px; } // Título
+        >.description { font-size: 17px; } // Descripción
     }
+    // VARIANTE: Título largo
     .title-secondary.-lg {
         max-width: 450px;
     }
@@ -242,10 +256,11 @@
         max-width: 455px;
         margin-bottom: 42px;
 
-        .descriptor { font-size: 13px; }
-        .title { font-size: 36px; }
-        .description { font-size: 18px; }
+        >.descriptor  { font-size: 13px; } // Descriptor
+        >.title       { font-size: 36px; } // Título
+        >.description { font-size: 18px; } // Descripción
     }
+    // VARIANTE: Título largo
     .title-secondary.-lg {
         max-width: 475px;
     }
@@ -256,10 +271,11 @@
         max-width: 520px;
         margin-bottom: 50px;
 
-        .descriptor { font-size: 14px; }
-        .title { font-size: 40px; }
-        .description { font-size: 20px; }
+        >.descriptor  { font-size: 14px; } // Descriptor
+        >.title       { font-size: 40px; } // Título
+        >.description { font-size: 20px; } // Descripción
     }
+    // VARIANTE: Título largo
     .title-secondary.-lg {
         max-width: 590px;
     }

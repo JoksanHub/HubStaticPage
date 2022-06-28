@@ -56,7 +56,7 @@
     }
 
     // Contenedor
-    .container {
+    >.container {
         position: absolute;
         top: 0;
         z-index: 2;
@@ -144,7 +144,7 @@
         height: 100vh;
         max-height: 560px;
         
-        .container {
+        >.container {
             justify-content: flex-start;
             align-items: center;
             padding: 0 40px;
@@ -180,7 +180,7 @@
         max-height: 580px;
         min-height: 560px;
         
-        .container {
+        >.container {
             padding: 0 50px;
         }
         .gradients { grid-template-columns: 1fr 2fr; }
@@ -193,7 +193,7 @@
         max-height: 650px;
         min-height: 600px;
         
-        .container {
+        >.container {
             padding: 0 60px;
         }
     }
@@ -220,7 +220,7 @@
         max-height: 974px;
         min-height: 870px;
         
-        .container {
+        >.container {
             padding: 0 30px;
         }
         .controls {

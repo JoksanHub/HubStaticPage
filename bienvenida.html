@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El Hub de Seguridad | Comunidad digital en temas de seguridad</title>
+    <title>Bienvenido al Hub</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <h1>Bienvenid@ al hub, [NOMBRE]</h1>
+
     <!-- REGISTRO: INICIO -->
     <section id="empezar" class="modal">
         <div class="container">
@@ -63,7 +65,7 @@
 
                 <div class="box">
                     <p class="description">Al hacer clic en "Registrarme" certifico que tengo 16 años o más y acepto las <a href="#" class="link">Condiciones de Uso</a>, la <a href="#" class="link">Política de Privacidad</a>, la <a href="#" class="link">Política de Cookies</a> y recibir novedades y promociones.</p>
-                    <div class="the-login">¿Ya tienes cuenta? <a href="./bienvenida.html" class="the-link">Inicia sesión</a></div>
+                    <div class="the-login">¿Ya tienes cuenta? <a href="#" class="the-link">Inicia sesión</a></div>
                 </div>
             </div>
         </div>
@@ -498,7 +500,7 @@
                     <p class="description">Escoge el avatar que más te guste.</p>
                     <!-- Formulario: Inicio -->
                     <form action="">
-                        <div class="cuadros corte">
+                        <div class="cuadros">
                             <!-- Avatar 1 -->
                             <label class="input-radio">
                                 <input type="radio" name="tema-interes" id="" value="industry">
@@ -580,7 +582,7 @@
                     <h2 class="title" style="text-align: center;">¡Felicidades!</h2>
                     <p class="description" style="text-align: center;">Ya eres un miembro.</p>
                     <div class="group-btn">
-                        <a href="./bienvenida.html" class="btn" style="width: 100%;">Iniciar Sesión</a>
+                        <a href="#iniciar-sesion" class="btn" style="width: 100%;">Iniciar Sesión</a>
                     </div>
                 </div>
             </div>
@@ -854,7 +856,7 @@
                         
                         <div class="group-btn">
                             <a href="#registro-2" class="btn -line -txtDark">Volver</a>
-                            <a href="./bienvenida-emp.html" class="btn">Continuar</a>
+                            <a href="#registro-4" class="btn">Continuar</a>
                         </div>
                     </form>
                 </div>
@@ -879,20 +881,20 @@
                     <img src="./img/logotypeHub.svg" alt="" class="logo">
                 </a>
                 <div class="links">
-                    <a href="#" class="link">Inicio</a>
-                    <a href="#beneficios" class="link">Beneficios</a>
-                    <a href="#miembro-hub" class="link">Qué miembro Hub eres</a>
-                    <a href="#nosotros" class="link">Nosotros</a>
-                    <a href="#siguenos" class="link">Síguenes</a>
-                    <a href="#unete" class="link">Únete</a>
+                    <a href="./#" class="link">Inicio</a>
+                    <a href="./#beneficios" class="link">Beneficios</a>
+                    <a href="./#miembro-hub" class="link">Qué miembro Hub eres</a>
+                    <a href="./#nosotros" class="link">Nosotros</a>
+                    <a href="./#siguenos" class="link">Síguenes</a>
+                    <a href="./#unete" class="link">Únete</a>
                 </div>
                 <div class="group-btn">
                     <a class="btn-blue -line sm" id="start-btn" href="#empezar">Empezar</a>
-                    <a href="./bienvenida.html" class="btn-cold sm -line" id="login-btn">Inicia sesión</a>
+                    <button class="btn-cold sm -line" id="login-btn">Inicia sesión</button>
                     <a class="btn-cold sm" id="signup-btn" href="#empezar">Regístrate</a>
                 </div>
             </div>
-        </nav> 
+        </nav>
         <div class="navbar-mb" id="navbar-mb">
             <div class="container">
                 <div class="links">
@@ -904,7 +906,7 @@
                     <a href="#unete" class="link">Únete</a>
                 </div>
                 <div class="group-btn">
-                    <a href="./bienvenida.html" class="btn-cold -line" id="login-btn">Inicia sesión</a>
+                    <button class="btn-cold -line" id="login-btn">Inicia sesión</button>
                     <a class="btn-cold" id="signin-btn" href="#empezar">Regístrate</a>
                 </div>
                 <div class="social">
@@ -981,112 +983,6 @@
             <img class="slide" src="./img/heroSlider-4.png" alt="Seguridad Industrial">
         </div>
     </header>
-
-    <!-- SECCIÓN: BENEFICIOS -->
-    <section id="beneficios">
-        <div class="container">
-            <div class="title-secondary -lg -cen">
-                <h4 class="descriptor">Beneficios</h4>
-                <h2 class="title">¡Acceso directo a tus beneficios a un clic!</h2>
-                <p class="description">Encuentra contenido educativo y de capacitación profesional en niveles básicos y avanzados.</p>
-            </div>
-            <div class="benefit-cards">
-                <!-- Card 1 -->
-                <div class="card">
-                    <img src="./icons/icon-benefits-1.svg" alt="campus">
-                    <div class="content">
-                        <h4 class="title">Campus</h4>
-                        <div class="description">Aprende con nuestros expertos.</div>
-                    </div>
-                </div>
-                <!-- Card 2 -->
-                <div class="card">
-                    <img src="./icons/icon-benefits-2.svg" alt="campus">
-                    <div class="content">
-                        <h4 class="title">Podcast</h4>
-                        <div class="description">Escucha nuestras entrevistas.</div>
-                    </div>
-                </div>
-                <!-- Card 3 -->
-                <div class="card">
-                    <img src="./icons/icon-benefits-3.svg" alt="campus">
-                    <div class="content">
-                        <h4 class="title">Noticias</h4>
-                        <div class="description">Manténte informado.</div>
-                    </div>
-                </div>
-                <!-- Card 4 -->
-                <div class="card">
-                    <img src="./icons/icon-benefits-4.svg" alt="campus">
-                    <div class="content">
-                        <h4 class="title">Eventos</h4>
-                        <div class="description">Actualízate, no te quedes fuera.</div>
-                    </div>
-                </div>
-                <!-- Card 5 -->
-                <div class="card">
-                    <img src="./icons/icon-benefits-5.svg" alt="campus">
-                    <div class="content">
-                        <h4 class="title">Wiki</h4>
-                        <div class="description">Explora la única biblioteca virtual en seguridad.</div>
-                    </div>
-                </div>
-                <!-- Card 6 -->
-                <div class="card">
-                    <img src="./icons/icon-benefits-6.svg" alt="campus">
-                    <div class="content">
-                        <h4 class="title">Canal infantil</h4>
-                        <div class="description">La herencia de un mundo más seguro para nuevas generaciones.</div>
-                    </div>
-                </div>
-                <!-- End Cards -->
-
-            </div>
-        </div>
-    </section>
-
-    <!-- SECCIÓN: MIEMBRO HUB -->
-    <section id="miembro-hub">
-        <div class="container">
-            <div class="title-secondary">
-                <h4 class="descriptor">Descubre</h4>
-                <h2 class="title">Qué miembro Hub eres</h2>
-                <p class="description">Selecciona al hubin de tu preferencia y personaliza tu navegación en la web.</p>
-            </div>
-            <!-- Card slider -->
-            <div class="card-slider">
-                <div class="myCard card active">
-                    <h4 class="title">Empresario</h4>
-                    <p class="description">Brinde a sus colaboradores la oportunidad de adquirir herramientas teóricas y prácticas para la prevención y atención de accidentes. Certifica a tu equipo sin salir del área laboral  100 % online con validez oficial.</p>
-                    <p class="descriptor">1 de 4 — Siguiente: Estudiante</p>
-                    <img src="./img/avatar-1.png" alt="Empresario" id="image-1" class="image-avatar">
-                </div>
-                <div class="myCard card">
-                    <h4 class="title">Estudiante</h4>
-                    <p class="description">Conviértete en un profesional, desarrolla competencias y habilidades laborales que no todos tienen y se un colaborador atractivo para las empresas que estan buscando alguien como tú.</p>
-                    <p class="descriptor">2 de 4 — Siguiente: Colaborador</p>
-                    <img src="./img/avatar-2.png" alt="Estudiante" id="image-2" class="image-avatar">
-                </div>
-                <div class="myCard card">
-                    <h4 class="title">Colaborador</h4>
-                    <p class="description">Superate y asegura el conocimiento para salvaguardar tu integridad física y la de tus compañeros. Aumenta tus conocimientos y habilidades laborales en diversas áreas relacionadas a la seguridad, esto te dará más y mejores oportunidades.</p>
-                    <p class="descriptor">3 de 4 — Siguiente: Hogar</p>
-                    <img src="./img/avatar-3.png" alt="Colaborador" id="image-3" class="image-avatar">
-                </div>
-                <div class="myCard card">
-                    <h4 class="title">Hogar</h4>
-                    <p class="description">Los accidentes llegan sin avisar y  la única forma de estar preparados es tener el conocimiento y las herramientas necesarias para poder responder lo mejor posible en esas situaciones, el 67% porciento de los accidentes ocurren en casa, protege a tus seres queridos.</p>
-                    <p class="descriptor">4 de 4 — Siguiente: Empresario</p>
-                    <img src="./img/avatar-4.png" alt="Hogar" id="image-4" class="image-avatar">
-                </div>
-            </div>
-            <!-- END: Card Slider-->
-            <div class="group-btn">
-                <button class="btn prev" onclick="plusSlides(-1)">❮</button>
-                <button class="btn next" onclick="plusSlides(1)">❯</button>
-            </div>
-        </div>
-    </section>
 
     <!-- Scripts -->
     <script src="script.js"></script>

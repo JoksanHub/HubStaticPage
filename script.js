@@ -137,10 +137,6 @@ function plusSlides(n) {
     showSlides(slideIndex += n);
 }
 
-/* function currentSlide(n) {
-    showSlides(slideIndex = n);
-} */
-
 function showSlides(n) {
     let i;
     let slides = document.getElementsByClassName('myCard');
@@ -199,5 +195,22 @@ function scrollFunction() {
         document.getElementById("navbar").style.position = "absolute";
         document.getElementById("navbar").style.backgroundColor = "transparent";
         document.getElementById("navbar-mb").style.position = "absolute";
+    }
+}
+
+
+
+
+
+
+// Cierre de modal
+var modal = document.getElementsByClassName("modal");
+
+// Cuando el usuario hace click fuera de un modal, este se cierra
+window.onclick = function(event) {
+    for (let i = 0; i < modal.length; i++) {
+        if (event.target == modal[i]) {
+            window.location.href = './#';
+        }
     }
 }
