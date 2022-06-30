@@ -63,7 +63,8 @@
     position: absolute;
     background: linear-gradient(180deg,#2C60FF00,#2C60FF7D),linear-gradient(0deg,#6E24DB00,#6E24DB7D);
 }
-.modal .image .close {
+.modal .image .close,
+.modal .content .close {
     position: absolute;
     top: 16px;
     left: 20px;
@@ -78,6 +79,10 @@
     width: 58px;
     font-weight: 500;
     letter-spacing: 0.03rem;
+}
+.modal .content .close {
+    left: 50px;
+    top: 20px;
 }
 
 
@@ -168,6 +173,25 @@
 #empezar .description {
     margin-bottom: 50px;
 }
+// Inicio de sesión y registro de emresa
+#inicio-sesion.modal >.container > .content,
+#registro-empresa-felicitaciones.modal >.container > .content {
+    border-radius: 6px;
+    width: 350px;
+
+    .the-container .title {margin-top: 28px;}
+    .the-container {
+        padding-bottom: 36px;
+
+        .title, .description { text-align: center;}
+        .btn {margin-top: 16px;}
+    }
+}
+
+// Páginas especiales: Registro de empresa
+#registro-empresa.modal {
+    .content {border-radius:4px;}
+}
 
 
 
@@ -196,7 +220,20 @@
             margin-bottom: 8px;
         }
     }
-    // Ventanas emergentes - Páginas especiales
+    // Páginas especiales: Registro de empresa
+    #registro-empresa.modal > .container,
+    #registro-empresa.modal > .container .content {
+        width: 520px;
+        max-width: 520px;
+    }
+    #registro-empresa.modal {
+        .divisor {display: flex;gap: 6px;}
+    }
+    // Páginas especiales: Inicio de sesión y felicitaciones a empresa por registro
+    #inicio-sesion.modal .content .close,
+    #registro-empresa-felicitaciones .content .close {
+        left: 40px;
+    }
 }
 @media only screen and (min-width: 1024px){
     // Ventanas emergentes - Contenido
@@ -219,6 +256,11 @@
     // Box
     .modal .content .box .description {
         padding: 25px 26px;
+    }
+    // Páginas especiales: Inicio de sesión y felicitaciones a empresa por registro
+    #inicio-sesion.modal .content .close,
+    #registro-empresa-felicitaciones .content .close {
+        left: 43px;
     }
 }
 @media only screen and (min-width: 1220px){
@@ -292,6 +334,26 @@
     #registro-6.modal > .container > .content {
         height: 530px;
     }
+    // Páginas especiales: Inicio de sesión
+    #inicio-sesion.modal > .container,
+    #registro-empresa-felicitaciones.modal > .container,
+    #inicio-sesion.modal > .container > .content,
+    #registro-empresa-felicitaciones.modal > .container > .content {
+        width: 380px;
+    }
+    #inicio-sesion.modal > .container > .content,
+    #registro-empresa-felicitaciones.modal > .container > .content {
+        height: 326px;
+    }
+    #inicio-sesion.modal .content .close,
+    #registro-empresa-felicitaciones.modal .content .close {left:30px;}
+    #registro-empresa-felicitaciones.modal > .container > .content .the-container .title {
+        margin-top: 50px;
+    }
+    // Páginas especiales: Registro de empresa
+    #registro-empresa.modal > .container > .content {
+        height: 442px;
+    }
 }
 @media only screen and (min-width: 1440px){
     // Ventanas emergentes - Contenido
@@ -341,6 +403,23 @@
     #registro-6.modal > .container > .content {
         height: 515px;
     }
+    // Páginas especiales: Inicio de sesión
+    #inicio-sesion.modal > .container,
+    #registro-empresa-felicitaciones.modal > .container,
+    #inicio-sesion.modal > .container > .content,
+    #registro-empresa-felicitaciones.modal > .container > .content {
+        width: 420px;
+    }
+    #inicio-sesion.modal > .container > .content,
+    #registro-empresa-felicitaciones.modal > .container > .content {
+        height: 332px;
+    }
+    #inicio-sesion.modal .content .close,
+    #registro-empresa-felicitaciones.modal .content .close {left:40px;}
+    // Páginas especiales: Registro de empresa
+    #registro-empresa.modal > .container > .content {
+        height: 448px;
+    }
 }
 @media only screen and (min-width: 1920px){
     .modal .container {
@@ -381,12 +460,12 @@
     #registro-1.modal > .container > .content {
         height: 597px;
     }
-    // Páginas especiales: Página 2 y 4
+    // Páginas especiales: Página 2
     #registro-2.modal > .container > .image,
     #registro-2.modal > .container > .content,
     #registro-4.modal > .container > .image,
     #registro-4.modal > .container > .content {
-        height: 643;
+        height: 643px;
     }
     // Páginas especiales: Página 3 y registro de empresa
     #registro-3.modal > .container .image,
@@ -394,6 +473,11 @@
     #registro-empresa.modal > .container .image,
     #registro-empresa.modal > .container > .content {
         height: 665px;
+    }
+    // Páginas especiales: Página 4
+    #registro-4.modal > .container > .image,
+    #registro-4.modal > .container > .content {
+        height: 664px;
     }
     // Páginas especiales: Página 5
     #registro-5.modal > .container > .image,
@@ -404,5 +488,13 @@
     #registro-6.modal > .container > .image,
     #registro-6.modal > .container > .content {
         height: 571px;
+    }
+    // Páginas especiales: Registro de empresa
+    #registro-empresa.modal > .container > .content {
+        height: 462px;
+    }
+    #registro-empresa.modal > .container, #registro-empresa.modal > .container .content {
+        width: 620px;
+        max-width: 620px;
     }
 }
