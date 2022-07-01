@@ -197,24 +197,10 @@ link:nth-child(3) {
         }
         >.group-btn .btn-cold { width: calc(50% - 4px); }
         // Iconos de redes
-        >.social {
+        >.sm-links {
             display: flex;
             margin-top: 24px;
             justify-content: center;
-        }
-        >.social >.sm-icon {
-            padding: 4px;
-            display: inline-flex;
-            margin-right: 8px;
-        }
-        >.social .sm-icon:last-child { margin-right: 0;}
-        >.social .sm-icon path {
-            fill: white;
-            transition: fill 1200ms ease-in-out;
-        }
-        >.social .sm-icon:hover path {
-            fill: #00FDFD;
-            background-color: rgba(0, 253, 253, 0.5);
         }
     }
 }

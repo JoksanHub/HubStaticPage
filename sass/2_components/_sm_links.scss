@@ -1,0 +1,25 @@
+.sm-links {
+
+    
+    .link {
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        transition: filter 750ms;
+    }
+    .link svg path {
+        transition: fill 750ms;
+    }
+    .link:hover svg path {
+        fill: #64FFFF;
+    }
+    .link:hover {
+        filter: drop-shadow(0 0 5px rgba(0,253,253,0.6));
+    }
+    // Espaciado entre enlaces
+    .link {margin-right: 4px;}
+    .link:last-child {margin-right: 0;}
+}

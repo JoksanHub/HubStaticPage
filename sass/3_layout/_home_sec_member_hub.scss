@@ -2,7 +2,7 @@
    # Miembro Hub - Sección
 ----------------------------------------------------*/
 #miembro-hub {
-    padding: 60px 0 600px 0;
+    padding: 60px 0 90px 0;
     display: flex;
     justify-content: center;
     background: #F6F9FF;
@@ -35,7 +35,7 @@
 // Pantallas de 768px en adelante
 @media only screen and (min-width: 768px) {
     #miembro-hub {
-        padding: 80px 0 300px 0;
+        padding: 80px 0 60px 0;
         .card-slider {
             width: calc(100% - 40px);
             padding-top: 40px;

@@ -1,0 +1,103 @@
+#footer {
+    background: #151D37;
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+
+    .container {max-width: 450px;}
+    
+    // Logo
+    .logo {
+        display: block;
+        text-align: center;
+    }
+    .logo img {
+        height: 42px;
+        margin-bottom: 16px;
+    }
+    
+    // Contenido
+    .content {
+        font-size: 13px;
+        color: #B8D9FF;
+    }
+    .content p {
+        margin-bottom: 8px;
+        display: flex;
+    }
+    .content p img {margin-right: 6px;}
+
+    // Social Media Links
+    .sm-links {margin:22px 0;}
+
+    // Copyright
+    .copyright {
+        font-size: 13px;
+        color: #B8D9FF;
+        text-align: center;
+    }
+    .copyright p {
+        margin: 6px 0;
+    }
+    .copyright .links .link:first-child {margin-right: 4px;}
+}
+
+// Responsive design
+@media only screen and (min-width:768px) {
+    #footer .container {
+        display: grid;
+        grid-template-areas:
+            'A B'
+            'C .'
+            'D D';
+        max-width: none;
+        width: 100%;
+        grid-template-columns: auto 250px;
+        
+        .logo      { grid-area: A; justify-self: baseline; }
+        .content   { grid-area: C; }
+        .sm-links  { grid-area: B; justify-self: end; }
+        .copyright { grid-area: D; }
+    }
+    // Contendio
+    #footer {
+        // Logo
+        .logo img { height: 46px;}
+        // Contenido
+        .content p { max-width: 390px; margin-bottom:12px;}
+        // Social Media Links
+        .container .sm-links { margin: 0; }
+        // Copyright
+        .copyright {
+            display: flex;
+            margin-top: 20px;
+            justify-content: space-between;
+        }
+        .copyright .copy {
+            margin: 0;
+        }
+        .copyright .links .link:first-child {margin-right: 6px;}
+    }
+}
+@media only screen and (min-width:1024px) {
+    #footer .container {
+        grid-template-areas:
+            'A C B'
+            'D D D';
+        grid-template-columns: 140px auto 250px;
+    }
+    #footer {
+        padding: 60px 0;
+
+        // Contenedor
+        .container {max-width: 1600px;}
+        // Logo
+        .logo img {height: 52px;}
+        // Párrafos
+        .content,
+        .copyright {font-size: 14px;}
+        .copyright { margin-top: 30px;}
+        // Contenido
+        .content p {max-width: 440px;}
+    }
+}

@@ -193,19 +193,22 @@
         margin: 0;
     }
 }
-// VARIANTE: Título largo
+// Variante: Tamaño
 .title-secondary.-lg {
     max-width: 360px;
+}
+// Variante: Color
+.title-secondary.-white .descriptor {color: white;}
+.title-secondary.-white .title {
+    color: white;
+    background: none;
+    -webkit-text-fill-color: white;
 }
 
 @media only screen and (min-width: 410px) {
     // VARIANTE: Título centrado
     .title-secondary.-cen {
-        >.descriptor,
-        >.title,
-        >.description {
-            text-align: center;
-        }
+        text-align: center;
     }
 }
 @media only screen and (min-width: 768px) {

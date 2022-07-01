@@ -1,0 +1,74 @@
+#cta {
+    background: linear-gradient(145deg, #2461ff, #735cff);
+    padding: 50px 0;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .title-secondary {
+        text-align: center;
+        margin-bottom: 0;
+        position: relative;
+        z-index: 3;
+    }
+    .btn {background: white;color: #2461ff;font-weight: 600;margin-top: 26px;}
+    // Círculos
+    .cir {
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        background: rgb(0,253,253);
+    }
+    .cir.uno {
+        top: -100px;
+        left: -100px;
+        background: radial-gradient(circle, rgba(0,253,253,0.2) 0%, rgba(0,253,253,0) 70%);
+        z-index: 1;
+    }
+    .cir.dos {
+        bottom: -100px;
+        right: -100px;
+        background: radial-gradient(circle, rgba(125,81,250,0.2) 0%, rgba(125,81,250,0) 70%);
+        z-index: 1;
+    }
+}
+
+// Responsive design
+@media only screen and (min-width:768px) {
+    #cta {
+        padding: 80px 0;
+
+        .cir {width: 600px;height: 600px;}
+    }
+}
+@media only screen and (min-width:1024px) {
+    #cta {
+        padding: 90px 0;
+        
+        .cir {width: 700px;height: 700px;}
+    }
+}
+@media only screen and (min-width:1220px) {
+    #cta {
+        padding: 100px 0;
+        
+        .cir {width: 800px;height: 800px;}
+    }
+}
+@media only screen and (min-width:1440px) {
+    #cta {
+        padding: 120px 0;
+        
+        .cir {width: 900px;height: 900px;}
+    }
+}
+@media only screen and (min-width:1920px) {
+    #cta {
+        padding: 150px 0;
+        
+        .cir {width: 1200px;height: 1200px;}
+    }
+}
