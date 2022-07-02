@@ -31,6 +31,20 @@
             color: #8285A4;
             margin: 0;
         }
+        a.description {
+            color: #2449c2;
+            text-decoration: none;
+            transition: color 500ms;
+        }
+        a.description:hover {
+            color: #112b80;
+        }
+    }
+    .card.empresa {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
     }
 }
 @media only screen and (min-width: 768px) {

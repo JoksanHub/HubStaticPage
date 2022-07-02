@@ -1,0 +1,44 @@
+#page-header {
+    background: $clr-dark-3;
+    padding: 120px 0;
+
+    > .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    } 
+
+    .main-title {
+        margin-bottom: 0;
+        text-align: center;
+    }
+}
+
+// Diseño adaptable
+@media only screen and (min-width: 768px) {
+    //
+}
+@media only screen and (min-width: 1024px) {
+    // Page Header
+    #page-header {
+        padding: 160px 0;
+    }
+}
+@media only screen and (min-width: 1220px) {
+    // Page Header
+    #page-header {
+        padding: 160px 0;
+    }
+}
+@media only screen and (min-width: 1440px) {
+    // Page Header
+    #page-header {
+        padding: 180px 0;
+    }
+}
+@media only screen and (min-width: 1920px) {
+    // Page Header
+    #page-header {
+        padding: 210px 0;
+    }
+}
