@@ -22,6 +22,9 @@
         display: flex;
         gap: 10px;
         margin-bottom: 48px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto;
     }
     .controller {
         width: 50px;

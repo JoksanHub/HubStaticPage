@@ -2,7 +2,6 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 12px;
 
     .container {
         max-width: 1600px;
@@ -18,17 +17,19 @@
         border-radius: 6px;
         overflow: hidden;
         background: linear-gradient(145deg, #2461ff, #735cff);
+        margin-bottom: 12px;
+        margin: 0 6px 12px;
     }
     // Title and icon
     .title-icon {
         position: absolute;
         text-align: center;
         z-index: 2;
-        margin-bottom: 30px;
-        transition: margin 500ms;
+        padding-bottom: 30px;
+        transition: padding 500ms;
     }
     .card:hover .title-icon {
-        margin-bottom: calc(50% - 12px);
+        padding-bottom: calc(50% - 12px);
     }
     .card .title-icon img {
         width: 22px;
@@ -39,7 +40,7 @@
         text-transform: uppercase;
         font-size: 11px;
         font-weight: 500;
-        letter-spacing: 2px;
+        letter-spacing: 1px;
         color: white;
         transition: font-size 500ms;
     }
@@ -78,8 +79,11 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: auto;
+        grid-gap: 12px;
+        gap: 12px;
     }
     .social-cards .card {
         max-width: none;
+        margin: 0;
     }
 }

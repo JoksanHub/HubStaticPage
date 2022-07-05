@@ -21,10 +21,12 @@
             auto auto auto auto;
         grid-template-areas:
             "card-1 card-2 card-3 card-4";
+        width: -webkit-calc(100% - 25px);
+        width: -moz-calc(100% - 25px);
         width: calc(100% - 25px);
         padding-top: 320px;
         position: absolute;
-        overflow-x: clip;
+        overflow-x: hidden;
     }
     .group-btn { margin-top: 546px;}
     .card:nth-child(1) { grid-area: card-1; }
@@ -39,6 +41,7 @@
         .card-slider {
             width: calc(100% - 40px);
             padding-top: 40px;
+            overflow-x: clip;
         }
         .group-btn {
             margin-top: 266px;
