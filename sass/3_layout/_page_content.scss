@@ -1,0 +1,53 @@
+.pagina-contenido {
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+
+    .container {
+        max-width: 580px;
+    }
+
+    // The content
+    h2 {
+        font-size: 22px;
+        margin: 18px 0 6px 0;
+    }
+    h3 {
+        font-size: 18px;
+        margin: 14px 0 4px 0;
+    }
+    p, ul li {
+        font-size: 14px;
+        line-height: 1.4;
+        margin: 6px 0 2px 0;
+    }
+    table { border-collapse: collapse; margin: 18px 0 10px 0;}
+    table td, table th {
+        border: 1px solid gray;
+        padding: 15px;
+    }
+    table tr td:first-child {
+        background: #cfcfcf;
+        font-weight: 700;
+    }
+}
+// Responsive Design
+@media only screen and (min-width: 768px) {
+    .pagina-contenido {
+        .container {
+            max-width: 600px;
+        }
+        p, ul li {
+            font-size: 15px;
+            margin: 10px 0 6px 0;
+        }
+    }
+}
+
+@media only screen and(min-width: 1220px) {
+    .pagina-contenido {
+        .container {
+            max-width: 800px;
+        }
+    }
+}

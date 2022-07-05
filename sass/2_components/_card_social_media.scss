@@ -1,0 +1,85 @@
+.social-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    .container {
+        max-width: 1600px;
+    }
+
+    .card {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        position: relative;
+        width: 100%;
+        max-width: 270px;
+        border-radius: 6px;
+        overflow: hidden;
+        background: linear-gradient(145deg, #2461ff, #735cff);
+    }
+    // Title and icon
+    .title-icon {
+        position: absolute;
+        text-align: center;
+        z-index: 2;
+        margin-bottom: 30px;
+        transition: margin 500ms;
+    }
+    .card:hover .title-icon {
+        margin-bottom: calc(50% - 12px);
+    }
+    .card .title-icon img {
+        width: 22px;
+        transition: width 500ms;
+    }
+    .card:hover .title-icon img { width: 40px; }
+    .title {
+        text-transform: uppercase;
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: 2px;
+        color: white;
+        transition: font-size 500ms;
+    }
+    .card:hover .title {font-size: 0;}
+
+    // Screen
+    .screen {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(0deg, #2462ffce 0%, #735cff00 50%);
+        opacity: 1;
+        z-index: 1;
+        transition: background 500ms, opacity 500ms;
+    }
+    .card:hover .screen {
+        opacity: 0;
+    }
+
+    // Image
+    .image {
+        width: 100%;
+        height: 100%;
+    }
+    .image img {
+        width: 100%;
+        height: 100%;
+        transition: opacity 700ms;
+    }
+    .card:hover .image img {opacity: 0.3;}
+}
+
+// Responsive Design
+@media only screen and (min-width: 1220px) {
+    .social-cards {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto;
+    }
+    .social-cards .card {
+        max-width: none;
+    }
+}

@@ -1,4 +1,37 @@
 #siguenos {
     background: #F6F9FF;
     padding: 50px 0;
+    display: flex;
+    justify-content: center;
+
+    .container {
+        max-width: 1600px;
+    }
+}
+
+// Responsve Design
+@media only screen and (min-width: 768px) {
+    #siguenos {
+        padding: 70px 0;
+    }
+}
+@media only screen and(min-width: 1024px) {
+    #siguenos {
+        padding: 90px 0;
+    }
+}
+@media only screen and(min-width: 1220px) {
+    #siguenos {
+        padding: 100px 0;
+    }
+}
+@media only screen and(min-width: 1440px) {
+    #siguenos {
+        padding: 110px 0;
+    }
+}
+@media only screen and(min-width: 1220px) {
+    #siguenos {
+        padding: 120px 0;
+    }
 }
