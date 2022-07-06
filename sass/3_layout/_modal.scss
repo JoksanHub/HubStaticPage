@@ -61,14 +61,12 @@
     width: 100%;
     height: 100%;
     position: absolute;
-    background: linear-gradient(180deg,#2C60FF00,#2C60FF7D),linear-gradient(0deg,#6E24DB00,#6E24DB7D);
+    background: linear-gradient(200deg,#2C60FF00 50%,#6E24DB7D 100%);
 }
-.modal .image .close,
-.modal .content .close {
+.modal .close {
     position: absolute;
     top: 16px;
-    left: 20px;
-    //right: 20px;
+    right: 20px;
     text-decoration: none;
     font-size: 9px;
     text-transform: uppercase;
@@ -83,15 +81,19 @@
     //color: #6D7AA9;
     //transition: color 800ms;
 }
-.modal .content .close {
-    left: 50px;
-    //right:50px;
-    top: 20px;
+.modal .content {
+    position: relative;
 }
-/* .modal .image .close:hover,
-.modal .content .close:hover {
-    color: #2c449d;
-} */
+.modal .content .close {
+    display: none;
+    color: gray;
+    font-size: 16px;
+    right: 26px;
+}
+#inicio-sesion.modal .close,
+#registro-empresa-felicitaciones.modal .close {
+    display: block;
+}
 
 
 
@@ -238,9 +240,9 @@
         .divisor {display: flex;gap: 6px;}
     }
     // Páginas especiales: Inicio de sesión y felicitaciones a empresa por registro
-    #inicio-sesion.modal .content .close,
-    #registro-empresa-felicitaciones .content .close {
-        left: 40px;
+    #inicio-sesion.modal .close,
+    #registro-empresa-felicitaciones.modal .close {
+        top: 24px;
     }
 }
 @media only screen and (min-width: 1024px){
@@ -264,11 +266,6 @@
     // Box
     .modal .content .box .description {
         padding: 25px 26px;
-    }
-    // Páginas especiales: Inicio de sesión y felicitaciones a empresa por registro
-    #inicio-sesion.modal .content .close,
-    #registro-empresa-felicitaciones .content .close {
-        left: 43px;
     }
 }
 @media only screen and (min-width: 1220px){
@@ -353,10 +350,14 @@
     #registro-empresa-felicitaciones.modal > .container > .content {
         height: 326px;
     }
-    #inicio-sesion.modal .content .close,
-    #registro-empresa-felicitaciones.modal .content .close {left:30px;}
     #registro-empresa-felicitaciones.modal > .container > .content .the-container .title {
         margin-top: 50px;
+    }
+    .modal .image .close {
+        display: none;
+    }
+    .modal .content .close {
+        display: block;
     }
     // Páginas especiales: Registro de empresa
     #registro-empresa.modal > .container > .content {
@@ -422,8 +423,6 @@
     #registro-empresa-felicitaciones.modal > .container > .content {
         height: 332px;
     }
-    #inicio-sesion.modal .content .close,
-    #registro-empresa-felicitaciones.modal .content .close {left:40px;}
     // Páginas especiales: Registro de empresa
     #registro-empresa.modal > .container > .content {
         height: 448px;

@@ -19,17 +19,18 @@
             <div class="image">
                 <div class="color"></div>
                 <img src="./img/modal-image.jpg" alt="">
-                <a href="#" class="close btn-blue">Cerrar</a>
+                <a href="#" class="close btn">Cerrar</a><!--✕-->
             </div>
             <!-- Content -->
             <div class="content">
+                <a href="#" class="close">✕</a>
                 <div class="the-container">
                     <h2 class="title">Bienvenido al Hub de Seguridad</h2>
                     <p class="description">Elige una opción para crear tu cuenta.</p>
                     <form action="">
                         <div class="group-btn lg">
-                            <a href="#registro-empresa" class="btn -line -txtDark">Soy una empresa</a>
-                            <a href="#registro-1" class="btn">Quiero unirme</a>
+                            <a href="#registro-empresa" class="btn -line -txtDark">Unirme como empresa</a>
+                            <a href="#registro-1" class="btn">Unirme como usuario</a>
                         </div>
                     </form>
                 </div>
@@ -44,10 +45,11 @@
             <div class="image">
                 <div class="color"></div>
                 <img src="./img/modal-image.jpg" alt="">
-                <a href="#" class="close btn-blue">Cerrar</a>
+                <a href="#" class="close btn-blue">Cerrar</a><!--✕-->
             </div>
             <!-- Content -->
             <div class="content">
+                <a href="#" class="close">✕</a>
                 <div class="the-container">
                     <h3 class="title">Crea tu cuenta y conocerás los beneficios de ser un Hubin</h3>
                     <p class="description">Registrate para obtener tus beneficios y ser parte de la comunidad sobre seguridad más grande de latinoamérica.</p>
@@ -77,10 +79,11 @@
             <div class="image">
                 <div class="color"></div>
                 <img src="./img/modal-image.jpg" alt="">
-                <a href="#" class="close btn-blue">Cerrar</a>
+                <a href="#" class="close btn-blue">Cerrar</a><!--✕-->
             </div>
             <!-- Content -->
             <div class="content">
+                <a href="#" class="close">✕</a>
                 <!-- The container -->
                 <div class="the-container">
                     <h3 class="title">Elige tus temas de interés</h3>
@@ -139,6 +142,7 @@
             </div>
             <!-- Content -->
             <div class="content">
+                <a href="#" class="close">✕</a>
                 <div class="the-container">
                     <h3 class="title">Crea tu cuenta y conocerás los beneficios de ser un Hubin</h3>
                     <p class="description">Registrate para obtener tus beneficios y ser parte de la comunidad sobre seguridad más grande de latinoamérica.</p>
@@ -149,6 +153,8 @@
                             <option value="" style="font-style:italic" disabled selected hidden>--Selecciona tu sexo</option>
                             <option value="0">Masculino</option>
                             <option value="1">Femenino</option>
+                            <option value="2">Otro</option>
+                            <option value="3">Prefiero no decirlo</option>
                         </select>
                         <input type="tel" placeholder="Teléfono" class="input">
                         <select name="pais" placeholder="País" class="input">
@@ -395,7 +401,7 @@
                         </select>
                         <input type="text" placeholder="Ciudad" class="input">
                         <div class="group-inp">
-                            <input type="number" placeholder="Día" class="input">
+                            <input type="number" placeholder="Día" class="input" min="1" max="31">
                             <select name="mes" placeholder="Mes" class="input">
                                 <option value=""style="font-style:italic" disabled selected hidden>--Mes</option>
                                 <option value="0">Enero</option>
@@ -411,7 +417,7 @@
                                 <option value="10">Noviembre</option>
                                 <option value="11">Diciembre</option>
                             </select>
-                            <input type="number" placeholder="Año" class="input">
+                            <input type="number" placeholder="Año" class="input" min="1900" max="2050">
                         </div>
                         
                         <div class="group-btn">
@@ -439,6 +445,7 @@
             </div>
             <!-- Content -->
             <div class="content">
+                <a href="#" class="close">✕</a>
                 <div class="the-container">
                     <h3 class="title">Qué miembro hub eres</h3>
                     <p class="description">Escoge el perfil con el que más te identificas.</p>
@@ -495,6 +502,7 @@
             </div>
             <!-- Content -->
             <div class="content">
+                <a href="#" class="close">✕</a>
                 <div class="the-container">
                     <h3 class="title">Elige un avatar</h3>
                     <p class="description">Escoge el avatar que más te guste.</p>
@@ -575,6 +583,7 @@
             </div>
             <!-- Content -->
             <div class="content">
+                <a href="#" class="close">✕</a>
                 <div class="the-container">
                     <div class="congratulations-img">
                         <img src="./img/congratulations.svg" alt="">
@@ -594,6 +603,7 @@
         <div class="container">
             <!-- Content -->
             <div class="content">
+                <a href="#" class="close">✕</a>
                 <div class="the-container">
                     <h3 class="title">Crea tu cuenta de empresa</h3>
                     <p class="description">Registrate para obtener los beneficios que tenemos para tu empresa.</p>
@@ -876,7 +886,8 @@
         <div class="container"> 
             <!-- Content -->
             <div class="content">
-                <a href="#" class="close btn-blue">Cerrar</a><!--✕-->
+
+                <a href="#" class="close">✕</a>
                 <div class="the-container">
                     <h3 class="title">¡Felicidades!</h3>
                     <p class="description">Tu empresa ya ha sido registrada. Ahora puedes inciar sesión en tu cuenta.</p>
@@ -893,7 +904,7 @@
         <div class="container"> 
             <!-- Content -->
             <div class="content">
-                <a href="#" class="close btn-blue">Cerrar</a><!--✕-->
+                <a href="#" class="close">✕</a>
                 <div class="the-container">
                     <h3 class="title">¡Bienvenido!</h3>
                     <p class="description">Accede a tus beneficios.</p>
@@ -934,8 +945,8 @@
                 </div>
                 <div class="group-btn">
                     <a class="btn-blue -line sm" id="start-btn" href="#empezar">Empezar</a>
-                    <a href="#inicio-sesion" class="btn-cold sm -line" id="login-btn">Inicia sesión</a>
-                    <a class="btn-cold sm" id="signup-btn" href="#empezar">Regístrate</a>
+                    <a href="#inicio-sesion" class="btn-cold sm -line" id="login-btn">Iniciar sesión</a>
+                    <a class="btn-cold sm" id="signup-btn" href="#empezar">Regístrarme</a>
                 </div>
             </div>
         </nav> 
@@ -950,8 +961,8 @@
                     <a href="#cta" class="link">Únete</a>
                 </div>
                 <div class="group-btn">
-                    <a href="#inicio-sesion" class="btn-cold -line" id="login-btn">Inicia sesión</a>
-                    <a class="btn-cold" id="signin-btn" href="#empezar">Regístrate</a>
+                    <a href="#inicio-sesion" class="btn-cold -line" id="login-btn">Iniciar sesión</a>
+                    <a class="btn-cold" id="signin-btn" href="#empezar">Regístrarme</a>
                 </div>
                 <div class="sm-links">
                     <!-- Facebook -->
@@ -1045,7 +1056,7 @@
             <div class="benefit-cards">
                 <!-- Card 1 -->
                 <div class="card">
-                    <img src="./icons/icon-benefits-1.svg" alt="campus">
+                    <img src="./icons/iconBenefits-1.svg" alt="campus">
                     <div class="content">
                         <h4 class="title">Campus</h4>
                         <div class="description">Aprende con nuestros expertos.</div>
@@ -1053,7 +1064,7 @@
                 </div>
                 <!-- Card 2 -->
                 <div class="card">
-                    <img src="./icons/icon-benefits-2.svg" alt="campus">
+                    <img src="./icons/iconBenefits-2.svg" alt="campus">
                     <div class="content">
                         <h4 class="title">Podcast</h4>
                         <div class="description">Escucha nuestras entrevistas.</div>
@@ -1061,7 +1072,7 @@
                 </div>
                 <!-- Card 3 -->
                 <div class="card">
-                    <img src="./icons/icon-benefits-3.svg" alt="campus">
+                    <img src="./icons/iconBenefits-3.svg" alt="campus">
                     <div class="content">
                         <h4 class="title">Noticias</h4>
                         <div class="description">Manténte informado.</div>
@@ -1069,7 +1080,7 @@
                 </div>
                 <!-- Card 4 -->
                 <div class="card">
-                    <img src="./icons/icon-benefits-4.svg" alt="campus">
+                    <img src="./icons/iconBenefits-4.svg" alt="campus">
                     <div class="content">
                         <h4 class="title">Eventos</h4>
                         <div class="description">Actualízate, no te quedes fuera.</div>
@@ -1077,7 +1088,7 @@
                 </div>
                 <!-- Card 5 -->
                 <div class="card">
-                    <img src="./icons/icon-benefits-5.svg" alt="campus">
+                    <img src="./icons/iconBenefits-5.svg" alt="campus">
                     <div class="content">
                         <h4 class="title">Wiki</h4>
                         <div class="description">Explora la única biblioteca virtual en seguridad.</div>
@@ -1085,7 +1096,7 @@
                 </div>
                 <!-- Card 6 -->
                 <div class="card">
-                    <img src="./icons/icon-benefits-6.svg" alt="campus">
+                    <img src="./icons/iconBenefits-6.svg" alt="campus">
                     <div class="content">
                         <h4 class="title">Canal infantil</h4>
                         <div class="description">La herencia de un mundo más seguro para nuevas generaciones.</div>
@@ -1115,13 +1126,13 @@
                 </div>
                 <div class="myCard card">
                     <h4 class="title">Estudiante</h4>
-                    <p class="description">Conviértete en un profesional, desarrolla competencias y habilidades laborales que no todos tienen y se un colaborador atractivo para las empresas que estan buscando alguien como tú.</p>
+                    <p class="description">Conviértete en un profesional, desarrolla competencias y habilidades laborales que no todos tienen y sé un colaborador atractivo para las empresas que estan buscando alguien como tú.</p>
                     <p class="descriptor">2 de 4 — Siguiente: Colaborador</p>
                     <img src="./img/avatar-2.png" alt="Estudiante" id="image-2" class="image-avatar">
                 </div>
                 <div class="myCard card">
                     <h4 class="title">Colaborador</h4>
-                    <p class="description">Superate y asegura el conocimiento para salvaguardar tu integridad física y la de tus compañeros. Aumenta tus conocimientos y habilidades laborales en diversas áreas relacionadas a la seguridad, esto te dará más y mejores oportunidades.</p>
+                    <p class="description">Supérate y asegura el conocimiento para salvaguardar tu integridad física y la de tus compañeros. Aumenta tus conocimientos y habilidades laborales en diversas áreas relacionadas a la seguridad, esto te dará más y mejores oportunidades.</p>
                     <p class="descriptor">3 de 4 — Siguiente: Hogar</p>
                     <img src="./img/avatar-3.png" alt="Colaborador" id="image-3" class="image-avatar">
                 </div>
@@ -1154,7 +1165,7 @@
                         <img src="./img/iconMision.png" alt="">
                     </div>
                     <h3 class="title">Misión</h3>
-                    <p class="description">Somos una empresa comprometida con la sociedad, que desarrolla contenido educativo de valor para enseñar a agente a prevenir y actuar ante accidentes o situaciones de riesgo; a través de difusión de información estructurada y fidedigna.</p>
+                    <p class="description">Somos una empresa comprometida con la sociedad, que desarrolla contenido educativo de valor para enseñar a la gente a prevenir y actuar ante accidentes o situaciones de riesgo; a través de difusión de información estructurada y fidedigna.</p>
                 </div>
                 <div class="card">
                     <div class="icon">
@@ -1176,7 +1187,7 @@
             </div>
             <div class="social-cards">
                 <!-- Card 1 -->
-                <a href="https://www.facebook.com/elhubdeseguridadmx" class="card">
+                <a href="https://www.facebook.com/elhubdeseguridadmx" target="_blank" class="card">
                     <div class="screen"></div>
                     <div class="title-icon">
                         <img src="./icons/sm-icon-1.svg" alt="">
@@ -1187,7 +1198,7 @@
                     </div>
                 </a>
                 <!-- Card 2 -->
-                <a href="https://www.instagram.com/elhubdeseguridadmx/" class="card">
+                <a href="https://www.instagram.com/elhubdeseguridadmx/" target="_blank" class="card">
                     <div class="screen"></div>
                     <div class="title-icon">
                         <img src="./icons/sm-icon-2.svg" alt="">
@@ -1198,7 +1209,7 @@
                     </div>
                 </a>
                 <!-- Card 3 -->
-                <a href="https://www.youtube.com/channel/UCqlQxayFQPY7fKSYNjlb9_Q" class="card">
+                <a href="https://www.youtube.com/channel/UCqlQxayFQPY7fKSYNjlb9_Q" target="_blank" class="card">
                     <div class="screen"></div>
                     <div class="title-icon">
                         <img src="./icons/sm-icon-6.svg" alt="">
@@ -1209,7 +1220,7 @@
                     </div>
                 </a>
                 <!-- Card 4 -->
-                <a href="https://www.tiktok.com/@elhubdeseguridadmx" class="card">
+                <a href="https://www.tiktok.com/@elhubdeseguridadmx" target="_blank" class="card">
                     <div class="screen"></div>
                     <div class="title-icon">
                         <img src="./icons/sm-icon-4.svg" alt="">
@@ -1293,6 +1304,8 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="script.js"></script>
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/slider-hero.js"></script>
+    <script src="./scripts/slider-members.js"></script>
 </body>
 </html>
