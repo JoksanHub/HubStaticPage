@@ -313,7 +313,7 @@
     // Páginas especiales: Página 1
     #registro-1.modal > .container > .image,
     #registro-1.modal > .container > .content {
-        height: 572px;
+        height: 744px;
     }
     // Páginas especiales: Página 2 y 4
     #registro-2.modal > .container > .image,
@@ -359,6 +359,10 @@
     .modal .content .close {
         display: block;
     }
+    #registro-1 .image > img {
+        width: auto;
+        height: 100%;
+    }
     // Páginas especiales: Registro de empresa
     #registro-empresa.modal > .container > .content {
         height: 442px;
@@ -390,7 +394,7 @@
     // Páginas especiales: Página 1
     #registro-1.modal > .container > .image,
     #registro-1.modal > .container > .content {
-        height: 604px;
+        height: 776px;
     }
     // Páginas especiales: Página 2 y 4
     #registro-2.modal > .container > .image,
@@ -465,7 +469,7 @@
     // Páginas especiales: Página 1
     #registro-1.modal > .container > .image,
     #registro-1.modal > .container > .content {
-        height: 597px;
+        height: 769px;
     }
     // Páginas especiales: Página 2
     #registro-2.modal > .container > .image,
